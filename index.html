@@ -8,9 +8,24 @@
 	<body>
 		<div id="bg"></div>
 		<span id="search">
+			<div id="datetime">
+				<script>
+					setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1);
+				</script>
+			</div>
 			<p>/*搜索功能敬请期待*/</p>
-			<p id="about">&copy; 2020 
-				<a href="https://github.com/Qizhen-Yang">Qizhen Yang</a></p>
+			<div id="about">
+				<span>
+					&copy; 2020 
+					<a href="https://github.com/Qizhen-Yang">Qizhen Yang</a>
+				</span>
+				<span>
+					<a href="mailto:alejandro_yang@yeah.net">帮我改进这个页面</a>
+				</span>
+				<span>
+					背景图片来自必应每日一图，仅供个人使用
+				</span>
+			</div>
 		</span>
 		<span id="buttons">
 			<a href="https://github.com">GitHub</a>

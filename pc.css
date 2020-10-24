@@ -29,6 +29,7 @@ a:hover{font-weight: 400;}
 	width: 40vw;
 	background-color: rgba(200, 200, 200, 0.3);
 }
+#datetime{font-size: 48px; margin: 0px 100px 18px 100px}
 #buttons
 {
 	display: inline-block;
@@ -56,4 +57,5 @@ a:hover{font-weight: 400;}
 	background-color: rgba(200, 200, 200, 0.2);
 	transition: all 0.6s;
 }
-#about{margin-top: 50vh;}
+#about{margin-top: 100px;font-size: 15px;line-height: 24px;}
+#about span{display: inline-block; margin: auto 8px auto 8px;}
