@@ -1,4 +1,4 @@
-*{margin: 0px;}
+*{margin: 0px;outline: none;}
 html, body
 {
 	background-color: transparent;
@@ -10,6 +10,19 @@ html, body
 }
 a, a:link, a:visited{color: inherit;}
 a:hover{font-weight: 400;}
+input
+{
+	font-family: 'Segoe UI', Tahoma, 'Microsoft Yahei UI', sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	border: none;
+	border-radius: 22px;
+	padding: 8px 16px 8px 16px;
+	margin: 12px;
+	background-color: rgba(200, 200, 200, 0.3);
+}
+input[type="submit"]{display: none;}
+input[type="text"]{width: 128px;}
 #bg
 {
 	background-image: url(https://www.yangshangzhen.com/bing/wallpaper);
@@ -23,7 +36,7 @@ a:hover{font-weight: 400;}
 {
 	display: inline-block;
 	vertical-align: top;
-	padding: 30vh 0vh 30vh 0vh;
+	padding: 15vh 0vh 15vh 0vh;
 	text-align: center;
 	height: 100vh;
 	width: 40vw;
