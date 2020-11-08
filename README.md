@@ -40,4 +40,4 @@ Gitee: <https://qizhen-yang.gitee.io/newtab>
 也欢迎转发分享这个项目！
 
 # 致谢
-- <@swang-0711> 给了我非常多的改进建议，在此表示感谢
+- [@swang-0711](https://github.com/swang-0711) 给了我非常多的改进建议，在此表示感谢
