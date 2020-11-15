@@ -2,7 +2,8 @@
 html, body
 {
 	background-color: transparent;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 	font-family: 'Segoe UI', Tahoma, 'Microsoft Yahei UI', sans-serif;
 	font-size: 18px;
 	font-weight: 100;
@@ -23,7 +24,16 @@ input
 	backdrop-filter: blur(15px);
 }
 input[type="submit"]{display: none;}
-input[type="text"]{width: 128px;}
+input[type="text"]{width: calc(80% - 10px);text-align: center;}
+#notice
+{
+	background-color: #0067b8;
+	color: #ffffff;
+	display: block;
+	height: 24px;
+	width: 100vw;
+	text-align: center;
+}
 #bg
 {
 	background-image: url(https://www.yangshangzhen.com/bing/wallpaper);
@@ -44,6 +54,9 @@ input[type="text"]{width: 128px;}
 	width: 40vw;
 	background-color: rgba(200, 200, 200, 0.3);
 	backdrop-filter: blur(15px);
+
+	z-index: 1;
+	position: fixed;
 }
 #datetime{font-size: 48px; margin: 0px 100px 18px 100px}
 #buttons
@@ -51,10 +64,15 @@ input[type="text"]{width: 128px;}
 	display: inline-block;
 	vertical-align: top;
 	height: 100vh;
-	width: 50vw;
+	width: 60vw;
+	margin-left: none;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: transparent;
+
+	z-index: 0;
+	position:fixed;
+	margin-left: 40%;
 }
 #buttons a
 {
@@ -78,5 +96,5 @@ input[type="text"]{width: 128px;}
 	transition: all 0.6s;
 }
 #buttons p{margin: 16px;}
-#about{margin-top: 100px;font-size: 15px;line-height: 24px;}
+#about{margin-top: 24px;font-size: 15px;line-height: 24px;}
 #about span{display: inline-block; margin: auto 8px auto 8px;}
