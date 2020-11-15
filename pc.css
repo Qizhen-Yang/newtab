@@ -29,9 +29,10 @@ input[type="text"]{width: calc(80% - 10px);text-align: center;}
 {
 	background-color: #0067b8;
 	color: #ffffff;
-	display: block;
+	display: none;
 	height: 24px;
 	width: 100vw;
+	font-size: 14px;
 	text-align: center;
 }
 #bg
