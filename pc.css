@@ -37,7 +37,7 @@ input[type="text"]{width: calc(80% - 10px);text-align: center;}
 }
 #bg
 {
-	background-image: url(https://api.xygeng.cn/Bing/);
+	background-image: url(https://www.yangshangzhen.com/bing/wallpaper);
 	background-color: #353535;
 	background-size: cover;
 	position: fixed;
