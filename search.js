@@ -16,3 +16,9 @@ function searchgoogle()
 	window.open("https://www.google.com/search?q="+google.value);
 	location.reload();
 }
+function searchgooglem()
+{
+	var googlem=document.getElementById("googlem");
+	window.open("https://g.dgclouds.net/search?q="+googlem.value);
+	location.reload();
+}
