@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="../pc.css" rel="stylesheet">
+		<script type="text/javascript" src="../search.js"></script>
+		<title>新建標籤頁</title>
+	</head>
+	<body>
+		<div id="bg"></div>
+		<span id="search">
+			<div id="datetime">
+				<script>
+					setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1);
+				</script>
+			</div>
+			<form action="javascript:searchgoogle()">
+				<input type="submit" value="Google"/>
+				<input id="google" type="text" placeholder="問谷歌" autofocus="true" autocomplete="off"/>
+			</form>
+			<form action="javascript:searchbing()">
+				<input type="submit" value="Bing"/>
+				<input id="bing" type="text" placeholder="必應搜索" autocomplete="off"/>
+			</form>
+			<div id="about">
+				<span>
+					&copy; 2020 
+					<a href="https://github.com/Qizhen-Yang">Qizhen Yang</a>
+				</span>
+				<span>
+					<a href="https://github.com/Qizhen-Yang/newtab#帮我改进">幫我改進這個頁面</a>
+				</span>
+				<span>
+					背景圖片來自必應每日一圖，僅供個人使用
+				</span>
+				<span>
+					<a href="https://github.com/Qizhen-Yang/newtab/blob/master/LICENSE">開源許可證</a>
+				</span>
+				<details>
+					<summary>建議清除瀏覽器緩存再訪問</summary>
+					<p>最近更新較多，若不清除可能導致JavaScript加載錯誤</p>
+				</details>
+			</div>
+		</span>
+
+		<span id="buttons"><p>請在GitHub倉庫中發佈issue給我提供鏈接</p><!--
+			<a href="https://www.youdao.com" target="_blank">有道词典</a>
+			<a href="https://map.baidu.com" target="_blank">百度地图</a>
+			<a href="https://bing.com/images" target="_blank">Bing图片</a>
+			<a href="https://pixabay.com" target="_blank">Pixabay图片</a>
+			<a href="https://bilibili.com" target="_blank">Bilibili</a>
+			<a href="https://www.csdn.net/" target="_blank">CSDN</a>
+			<a href="https://y.qq.com/" target="_blank">QQ音乐</a>
+			<a href="https://music.163.com" target="_blank">网易云音乐</a>
+			<a href="https://mail.163.com" target="_blank">163邮箱</a>
+			<a href="https://wenku.baidu.com" target="_blank">百度文库</a>
+			<a href="https://jianshu.com" target="_blank">简书</a>
+			<a href="https://ximalaya.com" target="_blank">喜马拉雅</a>
+			<a href="https://www.iqiyi.com/" target="_blank">爱奇艺</a>
+			<a href="https://haokan.baidu.com/" target="_blank">好看视频</a>
+			<a href="https://news.sina.com.cn/" target="_blank">新浪新闻</a>-->
+		</span>
+	</body>
+</html>
