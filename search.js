@@ -22,3 +22,9 @@ function searchgooglem()
 	window.open("https://g.dgclouds.net/search?q="+googlem.value);
 	location.reload();
 }
+function zhihu()
+{
+	var zhihu=document.getElementById("zhihu");
+	window.open("https://www.zhihu.com/search?q="+zhihu.value);
+	location.reload();
+}

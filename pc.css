@@ -99,3 +99,4 @@ input[type="text"]{width: calc(80% - 10px);text-align: center;}
 #buttons p{margin: 16px;}
 #about{margin-top: 24px;font-size: 15px;line-height: 24px;}
 #about span{display: inline-block; margin: auto 8px auto 8px;}
+summary{cursor: help;}
