@@ -4,7 +4,7 @@ html, body
 	background-color: transparent;
 	overflow-x: hidden;
 	overflow-y: auto;
-	font-family: 'Segoe UI', Tahoma, 'Microsoft Yahei UI', sans-serif;
+	font-family: 'Segoe UI', 'Microsoft Yahei UI', sans-serif;
 	font-size: 18px;
 	font-weight: 100;
 	color: #ffffff;
@@ -13,7 +13,7 @@ a, a:link, a:visited{color: inherit;}
 a:hover{font-weight: 400;}
 input
 {
-	font-family: 'Segoe UI', Tahoma, 'Microsoft Yahei UI', sans-serif;
+	font-family: 'Segoe UI', 'Microsoft Yahei UI', sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 	border: none;
@@ -37,7 +37,7 @@ input[type="text"]{width: calc(80% - 10px);text-align: center;}
 }
 #bg
 {
-	background-image: url(https://www.yangshangzhen.com/bing/wallpaper);
+	background-image: url(https://retiehe.com/backend/bing/1080p);
 	background-color: #353535;
 	background-size: cover;
 	position: fixed;
@@ -99,4 +99,3 @@ input[type="text"]{width: calc(80% - 10px);text-align: center;}
 #buttons p{margin: 16px;}
 #about{margin-top: 24px;font-size: 15px;line-height: 24px;}
 #about span{display: inline-block; margin: auto 8px auto 8px;}
-summary{cursor: help;}
