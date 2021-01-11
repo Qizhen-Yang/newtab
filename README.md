@@ -1,3 +1,5 @@
+[![github-repo]](https://github.com/Qizhen-Yang/newtab) ![gpl-3.0] [![github-pages]](https://qizhen-yang.github.io/newtab) [![gitee-pages]](https://qizhen-yang.gitee.io/newtab)
+
 # 简介
 浏览器自带的新标签页质量都很一般，为了解决这个问题，我制作了一个简洁美观大气的新标签页。
 
@@ -40,4 +42,10 @@ Gitee: <https://qizhen-yang.gitee.io/newtab>
 也欢迎转发分享这个项目！
 
 # 致谢
-- [@swang-0711](https://github.com/swang-0711) 给了我非常多的改进建议，在此表示感谢
+- [@Shanru-Wang](https://github.com/Shanru-Wang) 给了我非常多的改进建议
+- 热铁盒软件提供了每日一图API
+
+[github-repo]: https://shields.io/badge/-Repository-informational?logo=github
+[github-pages]: https://shields.io/badge/Site-GitHub_Pages-brightgreen
+[gitee-pages]: https://shields.io/badge/Site-Gitee_Pages-brightgreen
+[gpl-3.0]: https://shields.io/badge/license-GPL--3.0-black
