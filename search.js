@@ -1,25 +1,25 @@
-function searchbaidu()
+function baidu()
 {
 	var baidu=document.getElementById("baidu");
 	window.open("https://www.baidu.com/s?wd="+baidu.value);
 	location.reload();
 }
-function searchbing()
+function bing()
 {
 	var bing=document.getElementById("bing");
-	window.open("https://bing.com/search?q="+bing.value);
+	window.open("https://www.bing.com/search?q="+bing.value);
 	location.reload();
 }
-function searchgoogle()
+function google()
 {
 	var google=document.getElementById("google");
 	window.open("https://www.google.com/search?q="+google.value);
 	location.reload();
 }
-function searchgooglem()
+function googlem()
 {
 	var googlem=document.getElementById("googlem");
-	window.open("https://g.dgclouds.net/search?q="+googlem.value);
+	window.open("https://g.histsci.org/search?q="+googlem.value);
 	location.reload();
 }
 function zhihu()
