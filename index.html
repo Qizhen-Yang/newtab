@@ -14,15 +14,15 @@
 					setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1);
 				</script>
 			</div>
-			<form action="javascript:searchbaidu()">
+			<form action="javascript:baidu()">
 				<input type="submit" value="Baidu"/>
 				<input id="baidu" type="text" placeholder="百度一下" autofocus="true" autocomplete="off"/>
 			</form>
-			<form action="javascript:searchbing()">
+			<form action="javascript:bing()">
 				<input type="submit" value="Bing"/>
 				<input id="bing" type="text" placeholder="必应搜索" autocomplete="off"/>
 			</form>
-			<form action="javascript:searchgooglem()">
+			<form action="javascript:googlem()">
 				<input type="submit" value="Googlem"/>
 				<input id="googlem" type="text" placeholder="谷歌镜像搜索" autocomplete="off"/>
 			</form>
@@ -30,10 +30,15 @@
 				<input type="submit" value="Zhihu"/>
 				<input id="zhihu" type="text" placeholder="搜索知乎" autocomplete="off"/>
 			</form>
+			<form action="javascript:google()">
+				<input type="submit" value="Google"/>
+				<input id="google" type="text" placeholder="问谷歌" autocomplete="off"/>
+			</form>
 			<div id="about">
 				<span>
+					&copy 2020~2021 
 					<a href="https://github.com/Qizhen-Yang">
-						&copy 2020~2021 Qizhen Yang
+						Qizhen Yang
 					</a>
 				</span>
 				<span>
@@ -46,6 +51,7 @@
 		</span>
 
 		<span id="buttons">
+			<a href="https://github.com" target="_blank">GitHub</a>
 			<a href="https://www.youdao.com" target="_blank">有道词典</a>
 			<a href="https://map.baidu.com" target="_blank">百度地图</a>
 			<a href="https://bing.com/images" target="_blank">Bing图片</a>
