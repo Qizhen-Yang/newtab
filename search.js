@@ -19,7 +19,7 @@ function google()
 function googlem()
 {
 	var googlem=document.getElementById("googlem");
-	window.open("https://g.histsci.org/search?q="+googlem.value);
+	window.open("http://119.29.102.127/search?q="+googlem.value);
 	location.reload();
 }
 function zhihu()
