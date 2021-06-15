@@ -19,7 +19,7 @@ function google()
 function googlem()
 {
 	var googlem=document.getElementById("googlem");
-	window.open("http://www.google.cn.ua/search?q="+googlem.value);
+	window.open("https://goo.gle.workers.dev/search?q="+googlem.value);
 	location.reload();
 }
 function zhihu()
