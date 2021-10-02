@@ -1,78 +1,137 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
-		<meta charset="utf-8">
-		<link href="pc.css" rel="stylesheet">
-		<script type="text/javascript" src="search.js"></script>
-		<title>新标签页</title>
+		<title>NewTAB</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="assets/js/search.js"></script>
 	</head>
-	<body>
-		<div id="bg"></div>
-		<span id="search">
-			<div id="datetime">
-				<script>
-					setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1);
-				</script>
-			</div>
-			<form action="javascript:baidu()">
-				<input type="submit" value="Baidu"/>
-				<input id="baidu" type="text" placeholder="百度一下" autofocus="true" autocomplete="off"/>
-			</form>
-			<form action="javascript:bing()">
-				<input type="submit" value="Bing"/>
-				<input id="bing" type="text" placeholder="必应搜索" autocomplete="off"/>
-			</form>
-			<form action="javascript:googlem()">
-				<input type="submit" value="Googlem"/>
-				<input id="googlem" type="text" placeholder="谷歌镜像搜索" autocomplete="off"/>
-			</form>
-			<form action="javascript:zhihu()">
-				<input type="submit" value="Zhihu"/>
-				<input id="zhihu" type="text" placeholder="搜索知乎" autocomplete="off"/>
-			</form>
-			<form action="javascript:google()">
-				<input type="submit" value="Google"/>
-				<input id="google" type="text" placeholder="问谷歌" autocomplete="off"/>
-			</form>
-			<p><a href="https://www.google-fix.com" target="_blank">备用谷歌镜像</a></p>
-			<div id="about">
-				<span>
-					&copy 2020~2021 
-					<a href="https://github.com/Qizhen-Yang">
-						Qizhen Yang
-					</a>
-				</span>
-				<span>
-					<a href="https://github.com/Qizhen-Yang/newtab">GitHub仓库</a>
-				</span>
-				<span>
-					背景图片来自必应每日一图，仅供个人使用
-				</span>
-				<span>
-					<a href="google-mirror.html">关于谷歌镜像的说明</a>
-				</span>
-			</div>
-		</span>
+	<body class="is-preload">
 
-		<span id="buttons">
-			<a href="https://github.com" target="_blank">GitHub</a>
-			<a href="https://www.youdao.com" target="_blank">有道词典</a>
-			<a href="https://map.baidu.com" target="_blank">百度地图</a>
-			<a href="https://bing.com/images" target="_blank">Bing图片</a>
-			<a href="https://pixabay.com" target="_blank">Pixabay图片</a>
-			<a href="https://bilibili.com" target="_blank">Bilibili</a>
-			<a href="https://www.csdn.net/" target="_blank">CSDN</a>
-			<a href="https://y.qq.com/" target="_blank">QQ音乐</a>
-			<a href="https://music.163.com" target="_blank">网易云音乐</a>
-			<a href="https://mail.163.com" target="_blank">163邮箱</a>
-			<a href="https://wenku.baidu.com" target="_blank">百度文库</a>
-			<a href="https://jianshu.com" target="_blank">简书</a>
-			<a href="https://ximalaya.com" target="_blank">喜马拉雅</a>
-			<a href="https://www.iqiyi.com/" target="_blank">爱奇艺</a>
-			<a href="https://haokan.baidu.com/" target="_blank">好看视频</a>
-			<a href="https://news.sina.com.cn/" target="_blank">新浪新闻</a>
-			<a href="https://wikipedia.org/" target="_blank">Wikipedia</a>
-			<a href="https://wanweibaike.com" target="_blank">维基镜像版</a>
-		</span>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon solid fa-pager"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1 id="time">
+									<script>
+										setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1);
+									</script>
+								</h1>
+								<p>
+									This is NewTAB 2.0
+								</p>
+								<form action="javascript:baidu()">
+									<input type="submit" value="Baidu"/>
+									<input id="baidu" type="text" placeholder="百度一下" autofocus="true" autocomplete="off"/>
+								</form>
+								<form action="javascript:bing()">
+									<input type="submit" value="Bing"/>
+									<input id="bing" type="text" placeholder="必应搜索" autocomplete="off"/>
+								</form>
+								<form action="javascript:googlem()">
+									<input type="submit" value="Googlem"/>
+									<input id="googlem" type="text" placeholder="谷歌镜像搜索" autocomplete="off"/>
+								</form>
+								<form action="javascript:zhihu()">
+									<input type="submit" value="Zhihu"/>
+									<input id="zhihu" type="text" placeholder="搜索知乎" autocomplete="off"/>
+								</form>
+								<form action="javascript:google()">
+									<input type="submit" value="Google"/>
+									<input id="google" type="text" placeholder="问谷歌" autocomplete="off"/>
+								</form>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">简介</a></li>
+								<li><a href="#links">常用网址</a></li>
+								<li><a href="#about">关于</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">简介</h2>
+								<p>NewTAB&trade;是一个简介易用的新标签页。</p>
+								<p>整个网页在 Chromium 内核浏览器中表现效果最佳。</p>
+								<p>欢迎转发分享！</p>
+							</article>
+
+						<!-- About -->
+							<article id="links">
+								<h2 class="major">常用网址</h2>
+								<section style="text-align:center;margin-bottom:3rem;">
+									<a class="button" href="https://github.com" target="_blank">GitHub</a>
+									<a class="button" href="https://www.youdao.com" target="_blank">有道词典</a>
+									<a class="button" href="https://map.baidu.com" target="_blank">百度地图</a>
+									<a class="button" href="https://bing.com/images" target="_blank">Bing图片</a>
+									<a class="button" href="https://pixabay.com" target="_blank">Pixabay图片</a>
+									<a class="button" href="https://bilibili.com" target="_blank">Bilibili</a>
+									<a class="button" href="https://www.csdn.net/" target="_blank">CSDN</a>
+									<a class="button" href="https://y.qq.com/" target="_blank">QQ音乐</a>
+									<a class="button" href="https://music.163.com" target="_blank">网易云音乐</a>
+									<a class="button" href="https://mail.163.com" target="_blank">163邮箱</a>
+									<a class="button" href="https://wenku.baidu.com" target="_blank">百度文库</a>
+									<a class="button" href="https://jianshu.com" target="_blank">简书</a>
+									<a class="button" href="https://ximalaya.com" target="_blank">喜马拉雅</a>
+									<a class="button" href="https://www.iqiyi.com/" target="_blank">爱奇艺</a>
+									<a class="button" href="https://haokan.baidu.com/" target="_blank">好看视频</a>
+									<a class="button" href="https://news.sina.com.cn/" target="_blank">新浪新闻</a>
+									<a class="button" href="https://wikipedia.org/" target="_blank">Wikipedia</a>
+									<a class="button" href="https://wanweibaike.net" target="_blank">维基镜像版</a>
+								</section>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">关于 NewTAB 2.0</h2>
+								<p>A great work by <a href="https://qizhen-yang.cn">Qizhen Yang</a>.</p>
+								<p>背景图片来自必应每日一图，仅供个人使用</p>
+								<p>仍然喜欢老版本的 NewTAB? <a href="1.0">NewTAB 1.0 >>></a></p>
+								<h3>Contact</h3>
+								<ul class="icons">
+									<li><a href="mailto:alejandro_yang@yeah.net" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://github.com/Qizhen-Yang/newtab" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; 2020~2021 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.
+						Based on the design of <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>

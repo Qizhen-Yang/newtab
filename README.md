@@ -1,4 +1,4 @@
-[![github-repo]](https://github.com/Qizhen-Yang/newtab) ![gpl-3.0] [![github-pages]](https://qizhen-yang.github.io/newtab) [![gitee-pages]](https://qizhen-yang.gitee.io/newtab)
+[![github-repo]](https://github.com/Qizhen-Yang/newtab) ![gpl-3.0] [![github-pages]](https://qizhen-yang.cn/newtab)
 
 # 简介
 浏览器自带的新标签页质量都很一般，为了解决这个问题，我制作了一个简洁美观大气的新标签页。
@@ -6,16 +6,10 @@
 # 兼容性
 整个页面使用`HTML 5` + `CSS 3` + `JavaScript`，因此在Chromium内核中表现最佳。
 
-所有页面均在新版 Microsoft Edge （Windows 10 x64）中测试。
-
-我使用的浏览器：
-
-> 版本号：`WebKit 537.36, Chrome 86.0.4240.111`
->
-> 完整代码：`Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36 Edg/86.0.622.51`
+所有页面均在新版 Microsoft Edge (Windows 11 x64) 中测试。
 
 目前已知的兼容性问题：
-- IE内核的浏览器不支持毛玻璃效果
+- IE, FireFox浏览器不支持毛玻璃效果
 
 如果你发现了其它的兼容问题，欢迎在issue中提出！
 
@@ -27,17 +21,10 @@
 
 联系邮箱: <alejandro_yang@yeah.net>
 
-你也可以通过GitHub issues帮助我改进这个新标签页！
-
-# 访问问题
-目前已有Gitee上的镜像
-
-GitHub: <https://qizhen-yang.github.io/newtab>
-
-Gitee: <https://qizhen-yang.gitee.io/newtab>
+你也可以通过issues帮助我改进这个新标签页！
 
 # 支持我
-如果你喜欢，就留下一颗Star⭐吧！
+如果你喜欢，就留下一颗⭐吧！
 
 也欢迎转发分享这个项目！
 
@@ -47,5 +34,4 @@ Gitee: <https://qizhen-yang.gitee.io/newtab>
 
 [github-repo]: https://shields.io/badge/-Repository-informational?logo=github
 [github-pages]: https://shields.io/badge/Site-GitHub_Pages-brightgreen
-[gitee-pages]: https://shields.io/badge/Site-Gitee_Pages-brightgreen
 [gpl-3.0]: https://shields.io/badge/license-GPL--3.0-black
