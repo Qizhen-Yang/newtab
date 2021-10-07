@@ -27,21 +27,19 @@
 						</h1>
 						<div class="content">
 							<div class="inner">
-								<h1 id="time">
-									<script>
-										setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1);
-									</script>
-								</h1>
-								<p>
-									This is NewTAB 2.0
-								</p>
+								<script>
+									window.onload=function(){document.getElementById('time').innerHTML=new Date().toLocaleString();}
+									setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1000);
+								</script>
+								<h1 id="time"></h1>
+								<p>This is NewTAB 2.0</p>
 								<form action="javascript:search()">
 									<input type="submit" value="search" style="display:none;"/>
 									<input id="searchbox" type="text" placeholder="搜索" autofocus="true" autocomplete="off"/>
 									<select id="engines">
 										<option>百度</option>
 										<option>Bing</option>
-										<option>Google 镜像</option>
+										<option>Google 镜像 (国内可用)</option>
 										<option>知乎</option>
 										<option>Google</option>
 									</select>
