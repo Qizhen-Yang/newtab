@@ -104,6 +104,9 @@
 							<article id="stickynotes">
 								<h2 class="major">便笺<sup>BETA</sup></h2>
 								<textarea id="sticky" placeholder="Type something ..." oninput="save()"></textarea>
+								<script>
+									document.getElementById("sticky").innerText = localStorage.getItem("newtabSticky");
+								</script>
 								<p id="savelog">&nbsp;</p>
 								<p>
 									便笺内容仅保存到本地缓存，没有任何云端存储

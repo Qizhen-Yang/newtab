@@ -1,8 +1,3 @@
-window.onload = function ()
-{
-	document.getElementById("sticky").innerText = localStorage.getItem("newtabSticky");
-}
-
 function save()
 {
 	localStorage.setItem("newtabSticky", document.getElementById("sticky").value);
