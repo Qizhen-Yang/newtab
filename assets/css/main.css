@@ -1617,8 +1617,7 @@ input, select, textarea {
 
 		textarea#sticky {
 			resize: none;
-			height: fit-content;
-			min-height: 20rem;	
+			height: 15rem;	
 		}
 
 /* Footer */
