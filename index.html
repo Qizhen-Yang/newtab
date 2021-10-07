@@ -8,9 +8,9 @@
 	<head>
 		<title>NewTAB</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 
 		<script type="text/javascript" src="assets/js/search.js"></script>
 		<script type="text/javascript" src="assets/js/sticky.js"></script>
@@ -19,12 +19,35 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+				<div id="he-plugin-simple"></div>
+				<script>
+				WIDGET = {
+				  "CONFIG": {
+				    "modules": "102",
+				    "background": "5",
+				    "tmpColor": "FFFFFF",
+				    "tmpSize": "16",
+				    "cityColor": "FFFFFF",
+				    "citySize": "16",
+				    "aqiColor": "FFFFFF",
+				    "aqiSize": "16",
+				    "weatherIconSize": "24",
+				    "alertIconSize": "18",
+				    "padding": "10px 10px 10px 10px",
+				    "shadow": "0",
+				    "language": "auto",
+				    "fixed": "true",
+				    "vertical": "center",
+				    "horizontal": "center",
+				    "left": "10",
+				    "top": "10",
+				    "key": "d02d25dc9e674a1889a2af63fd10f1f5"
+				  }
+				}
+				</script>
+				<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 				<!-- Header -->
 					<header id="header">
-						<h1 class="logo">
-							N
-						</h1>
 						<div class="content">
 							<div class="inner">
 								<script>
@@ -32,7 +55,6 @@
 									setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1000);
 								</script>
 								<h1 id="time"></h1>
-								<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=ty&skin=sogou&color=ffffff&align=center" frameborder="0" width="180" height="50" allowtransparency="true" style="transform: scale(0.8, 0.8);"></iframe>
 								<p>This is NewTAB&trade; 2.0</p>
 								<form action="javascript:search()">
 									<input type="submit" value="search" style="display:none;"/>
@@ -107,14 +129,15 @@
 							<article id="stickynotes">
 								<h2 class="major">便笺<sup>BETA</sup></h2>
 								<section>
+									<h6 id="savelog">已从 localStorage 读取便笺内容</h6>
 									<textarea id="sticky" placeholder="Type something ..." oninput="save()" style="white-space: pre-line;word-wrap: break-word;"></textarea>
 									<script>
 										read();
 									</script>
-									<p id="savelog">&nbsp;</p>
+									<a class="button primary" onclick="printnote()">打印</a>
+									<a class="button" onclick="document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
 									<p>
-										便笺内容仅保存到本地缓存，没有任何云端存储
-										<br/>
+										便笺内容仅保存到本地缓存, 没有任何云端存储, 
 										<strong>清除浏览器缓存可能会造成内容永久丢失</strong>
 									</p>
 								</section>
