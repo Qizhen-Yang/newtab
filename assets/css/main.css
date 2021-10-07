@@ -267,11 +267,11 @@ input, select, textarea {
 
 	blockquote {
 		border-left: solid 4px #ffffff;
-		font-style: italic;
+		font-style: normal;
 		margin: 0 0 2rem 0;
 		padding: 0.5rem 0 0.5rem 2rem;
 	}
-
+	
 	code {
 		background: rgba(255, 255, 255, 0.075);
 		border-radius: 4px;
@@ -742,7 +742,7 @@ input, select, textarea {
 	ul {
 		list-style: disc;
 		margin: 0 0 2rem 0;
-		padding-left: 1em;
+		padding-left: 2em;
 	}
 
 		ul li {
@@ -1560,7 +1560,7 @@ input, select, textarea {
 		}
 
 			#main article section {
-				max-height: 55vh;
+				max-height: 60vh;
 				overflow-y: auto;	
 			}
 

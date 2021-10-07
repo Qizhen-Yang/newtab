@@ -19,33 +19,37 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-				<div id="he-plugin-simple"></div>
-				<script>
-				WIDGET = {
-				  "CONFIG": {
-				    "modules": "102",
-				    "background": "5",
-				    "tmpColor": "FFFFFF",
-				    "tmpSize": "16",
-				    "cityColor": "FFFFFF",
-				    "citySize": "16",
-				    "aqiColor": "FFFFFF",
-				    "aqiSize": "16",
-				    "weatherIconSize": "24",
-				    "alertIconSize": "18",
-				    "padding": "10px 10px 10px 10px",
-				    "shadow": "0",
-				    "language": "auto",
-				    "fixed": "true",
-				    "vertical": "center",
-				    "horizontal": "center",
-				    "left": "10",
-				    "top": "10",
-				    "key": "d02d25dc9e674a1889a2af63fd10f1f5"
-				  }
-				}
-				</script>
-				<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+				<!--Weather-->
+				<section>
+					<style>div[data-v-41ba7e2c]{z-index: 1;}</style>
+					<div id="he-plugin-simple" style="z-index: 10;"></div>
+					<script>
+					WIDGET = {
+					  "CONFIG": {
+					    "modules": "102",
+					    "background": "5",
+					    "tmpColor": "FFFFFF",
+					    "tmpSize": "16",
+					    "cityColor": "FFFFFF",
+					    "citySize": "16",
+					    "aqiColor": "FFFFFF",
+					    "aqiSize": "16",
+					    "weatherIconSize": "24",
+					    "alertIconSize": "18",
+					    "padding": "10px 10px 10px 10px",
+					    "shadow": "0",
+					    "language": "auto",
+					    "fixed": "true",
+					    "vertical": "center",
+					    "horizontal": "center",
+					    "left": "10",
+					    "top": "10",
+					    "key": "d02d25dc9e674a1889a2af63fd10f1f5"
+					  }
+					}
+					</script>
+					<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+				</section>
 				<!-- Header -->
 					<header id="header">
 						<div class="content">
@@ -83,24 +87,21 @@
 
 						<!-- Intro -->
 							<article id="intro">
-								<h2 class="major">NewTAB 2.0 | 简介</h2>
+								<h2 class="major">NewTAB&trade; 2.0</h2>
 								<section>
-									<p>NewTAB&trade; 是一个简介易用的新标签页。</p>
+									<p>「NewTAB」是一个简洁易用的新标签页。╰(*°▽°*)╯</p>
+									<p>这里收录了<a href="#">多个搜索引擎</a>以及<a href="#links">众多常用网站链接</a>。还有基于本地缓存的「便笺」。</p>
 									<p>整个网页在 Chromium 内核浏览器中表现效果最佳。</p>
-									<p>欢迎转发分享！GitHub 仓库: <a href="https://github.com/Qizhen-Yang/newtab">Qizhen-Yang/newtab</a></p>
-									<hr/>
-									<p>背景图片来自必应每日一图，仅供个人使用</p>
-									<p>仍然喜欢老版本的 NewTAB? <a href="1.0">NewTAB 1.0 >>></a></p>
-									<h4>Contact</h3>
-									<ul>
-										<li>Email: <a href="mailto:alejandro_yang@yeah.net">alejandro_yang@yeah.net</a></li>
-										<li>GitHub: <a href="https://github.com/Qizhen-Yang">@Qizhen-Yang</a></li>
-										<li>Twitter: <a href="https://twitter.com/YangQizhen">@YangQizhen</a></li>
-									</ul>
+									<p>欢迎转发分享！</p>
+									<p>
+										GitHub 仓库: <a href="https://github.com/Qizhen-Yang/newtab">Qizhen-Yang/newtab</a>
+										<br/>
+										作者：<a href="https://qizhen-yang.cn/">Qizhen Yang</a>
+									</p>
 								</section>
 							</article>
 
-						<!-- About -->
+						<!-- Links -->
 							<article id="links">
 								<h2 class="major">常用网址</h2>
 								<section style="text-align:center;margin-bottom:3rem;">
@@ -125,21 +126,63 @@
 								</section>
 							</article>
 
-						<!-- About -->
+						<!-- Sticky Notes -->
 							<article id="stickynotes">
 								<h2 class="major">便笺<sup>BETA</sup></h2>
 								<section>
-									<h6 id="savelog">已从 localStorage 读取便笺内容</h6>
-									<textarea id="sticky" placeholder="Type something ..." oninput="save()" style="white-space: pre-line;word-wrap: break-word;"></textarea>
+									<h6 id="savelog">已从「localStorage」读取便笺内容</h6>
+									<textarea id="sticky" placeholder="随便记点什么 ..." oninput="save()" style="white-space: pre-line;word-wrap: break-word;"></textarea>
 									<script>
 										read();
 									</script>
 									<a class="button primary" onclick="printnote()">打印</a>
 									<a class="button" onclick="document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
 									<p>
-										便笺内容仅保存到本地缓存, 没有任何云端存储, 
+										便笺内容仅保存到「本地缓存」, 没有任何云端存储, 
 										<strong>清除浏览器缓存可能会造成内容永久丢失</strong>
 									</p>
+									<p>*Android 浏览器不可用「打印」功能。: (</p>
+								</section>
+							</article>
+						
+						<!--About-->
+							<article id="about">
+								<h2 class="major">关于</h2>
+								<section>
+									<p>背景图片来自「必应每日一图」，仅供个人使用</p>
+									<p>如果你是此标签页中有所链接 / 提及的网站的作者 / 管理员 / 所有者，且你认为你的网站在此处出现有所不妥，请<a href="#contact">联系我</a>，我将第一时间处理。ヾ(•ω•`)o</p>
+									<p>仍然喜欢老版本的 NewTAB? <a href="1.0">NewTAB 1.0 >>></a></p>
+								</section>
+								<h3 class="major">大事记</h3>
+								<section>
+									2021-10-07
+									<blockquote>CSS 大改动 <br/> 加入「便笺」 <br/> 修改滚动条样式 <br/> 加入「大事记」</blockquote>
+									2021-10-05
+									<blockquote>调整字体 <br/> 尝试增加访问速度</blockquote>
+									2021-10-02
+									<blockquote>创建 NewTAB 2.0 (●'◡'●)</blockquote>
+									2021-01-15
+									<blockquote>找到了一个稳定的 Google 镜像</blockquote>
+									2020-11-15
+									<blockquote>调整布局 <br/> 改善搜索框的外观</blockquote>
+									2020-11-07
+									<blockquote>加入「毛玻璃」特效 <br/> 添加搜索框</blockquote>
+									2020-10-24
+									<blockquote>网页上开始显示时间</blockquote>
+									2020-10-22
+									<blockquote>创建 NewTAB 1.0</blockquote>
+								</section>
+							</article>
+
+						<!--Contact-->
+							<article id="contact">
+								<h2 class="major">联系</h2>
+								<section>
+									<ul>
+										<li>「Email」<a href="mailto:alejandro_yang@yeah.net">alejandro_yang@yeah.net</a></li>
+										<li>「GitHub」<a href="https://github.com/Qizhen-Yang">@Qizhen-Yang</a></li>
+										<li>「Twitter」<a href="https://twitter.com/YangQizhen">@YangQizhen</a></li>
+									</ul>
 								</section>
 							</article>
 
@@ -147,8 +190,15 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; 2020~2021 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.
-						Based on the design of <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">
+							&copy; 2020~2021 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.
+							|
+							Based on the design of <a href="https://html5up.net">HTML5 UP</a>.
+							|
+							<a href="#about">关于</a>
+							|
+							<a href="#contact">联系</a>
+						</p>
 					</footer>
 
 			</div>
