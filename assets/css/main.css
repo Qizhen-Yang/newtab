@@ -109,6 +109,18 @@ input, select, textarea {
 
 /* Type */
 
+	*::-webkit-scrollbar {
+		width: 5px;
+		background-color: transparent;
+	}
+	*::-webkit-scrollbar-thumb {
+		background-color: #555555;
+		border-radius: 5px;
+	}
+	*::-webkit-scrollbar-button {
+		display: none;
+	}
+
 	html {
 		font-size: 14pt;
 	}
@@ -1542,6 +1554,11 @@ input, select, textarea {
 			border-radius: 4px;
 			opacity: 0;
 		}
+
+			#main article section {
+				max-height: 60vh;
+				overflow-y: auto;	
+			}
 
 			#main article.active {
 				-moz-transform: translateY(0);

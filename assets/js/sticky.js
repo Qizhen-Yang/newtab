@@ -1,3 +1,8 @@
+function read()
+{
+	document.getElementById("sticky").value = localStorage.getItem("newtabSticky");
+}
+
 function save()
 {
 	localStorage.setItem("newtabSticky", document.getElementById("sticky").value);
