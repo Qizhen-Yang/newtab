@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>NewTAB</title>
@@ -11,9 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
-
-		<script type="text/javascript" src="assets/js/search.js"></script>
-		<script type="text/javascript" src="assets/js/sticky.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -59,7 +51,7 @@
 									setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1000);
 								</script>
 								<h1 id="time"></h1>
-								<p>This is NewTAB&trade; 2.0</p>
+								<p>「便笺」增加了 Markdown 支持！</p>
 								<form action="javascript:search()">
 									<input type="submit" value="search" style="display:none;"/>
 									<input id="searchbox" type="text" placeholder="搜索" autofocus="true" autocomplete="off"/>
@@ -131,17 +123,15 @@
 								<h2 class="major">便笺<sup>BETA</sup></h2>
 								<section>
 									<h6 id="savelog">已从「localStorage」读取便笺内容</h6>
-									<textarea id="sticky" placeholder="随便记点什么 ..." oninput="save()" style="white-space: pre-line;word-wrap: break-word;"></textarea>
-									<script>
-										read();
-									</script>
+									<textarea id="sticky" oninput="save()" onblur="preview()" style="white-space: pre-line;word-wrap: break-word;"></textarea>
+									<section id="md" onclick="edit()"></section>
 									<a class="button primary" onclick="printnote()">打印</a>
 									<a class="button" onclick="document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
 									<p>
 										便笺内容仅保存到「本地缓存」, 没有任何云端存储, 
 										<strong>清除浏览器缓存可能会造成内容永久丢失</strong>
 									</p>
-									<p>*Android 浏览器不可用「打印」功能。: (</p>
+									<p>*部分浏览器不支持「打印」功能。: (</p>
 								</section>
 							</article>
 						
@@ -155,6 +145,8 @@
 								</section>
 								<h3 class="major">大事记</h3>
 								<section>
+									2021-10-08
+									<blockquote>「便笺」增加 Markdown 支持</blockquote>
 									2021-10-07
 									<blockquote>CSS 大改动 <br/> 加入「便笺」 <br/> 修改滚动条样式 <br/> 加入「大事记」</blockquote>
 									2021-10-05
@@ -207,6 +199,11 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+			<script src="assets/js/search.js"></script>
+			<script src="assets/js/sticky.js"></script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
