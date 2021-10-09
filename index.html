@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/sticky.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 	</head>
 	<body class="is-preload">
@@ -120,18 +121,27 @@
 
 						<!-- Sticky Notes -->
 							<article id="stickynotes">
-								<h2 class="major">便笺<sup>BETA</sup></h2>
 								<section>
 									<h6 id="savelog">已从「localStorage」读取便笺内容</h6>
-									<textarea id="sticky" oninput="save()" onblur="preview()" style="white-space: pre-line;word-wrap: break-word;"></textarea>
+									<textarea id="sticky" oninput="edit();save();" onblur="preview()"></textarea>
+
 									<section id="md" onclick="edit()"></section>
-									<a class="button primary" onclick="printnote()">打印</a>
-									<a class="button" onclick="document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
-									<p>
-										便笺内容仅保存到「本地缓存」, 没有任何云端存储, 
-										<strong>清除浏览器缓存可能会造成内容永久丢失</strong>
-									</p>
-									<p>*部分浏览器不支持「打印」功能。: (</p>
+
+									<a class="button primary" onclick="javascript:printnote()">打印</a>
+									<a class="button" onclick="javascript:document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
+									<a class="button" href="#stickyguide">帮助</a>
+								</section>
+							</article>
+
+						<!--Sticky Notes Guide-->
+							<article id="stickyguide">
+								<h2 class="major">「便笺」指南</h2>
+								<section>
+									<p>便笺内容仅保存到「本地缓存」, 没有任何云端存储</p>
+									<p><strong>清除浏览器缓存可能会造成内容永久丢失</strong></p>
+									<p>部分浏览器不支持「打印」功能。: (</p>
+									<p>增加了 Markdown 支持，不在编辑模式中时会自动显示预览</p>
+									<a href="#stickynotes" class="button primary">回到「便笺」</a>
 								</section>
 							</article>
 						

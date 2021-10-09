@@ -1,0 +1,30 @@
+textarea#sticky, section#md {
+	resize: none;
+	height: 20rem;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-moz-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-webkit-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	background-color: transparent;
+	border-radius: 4px;
+	border: solid 1px #ffffff;
+	color: inherit;
+	display: block;
+	outline: 0;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	width: 100%;
+	font-size: 0.8rem;
+	letter-spacing: 0.05rem;
+	word-wrap: break-word;
+}
+
+textarea#sticky:focus, section#md:hover {
+	background: rgba(255, 255, 255, 0.075);
+	border-color: #ffffff;
+	box-shadow: 0 0 0 1px #ffffff;
+}
