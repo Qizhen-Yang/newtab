@@ -1162,7 +1162,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url(https://retiehe.com/backend/bing/1080p);
+			background-image: url("https://api.kdcc.cn/img/");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
