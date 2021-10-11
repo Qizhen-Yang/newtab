@@ -1,5 +1,3 @@
-date = new Date();
-
 function search()
 {
 	var n = document.getElementById("engines").selectedIndex;
@@ -20,6 +18,7 @@ function fix(num, length)
 
 function setdate()
 {
+	date = new Date();
 	document.getElementById('time').innerText = fix(date.getHours(), 2) + ":" + fix(date.getMinutes(), 2);
 	document.getElementById('date').innerText = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
 }
