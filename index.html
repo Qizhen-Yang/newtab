@@ -95,26 +95,36 @@
 						<!-- Links -->
 							<article id="links">
 								<h2 class="major">常用网址</h2>
-								<section style="text-align:center;margin-bottom:3rem;">
-									<a class="button" href="https://github.com" target="_blank">GitHub</a>
-									<a class="button" href="https://www.youdao.com" target="_blank">有道词典</a>
-									<a class="button" href="https://map.baidu.com" target="_blank">百度地图</a>
-									<a class="button" href="https://bing.com/images" target="_blank">Bing图片</a>
-									<a class="button" href="https://pixabay.com" target="_blank">Pixabay</a>
-									<a class="button" href="https://bilibili.com" target="_blank">Bilibili</a>
-									<a class="button" href="https://www.csdn.net/" target="_blank">CSDN</a>
-									<a class="button" href="https://y.qq.com/" target="_blank">QQ音乐</a>
-									<a class="button" href="https://music.163.com" target="_blank">网易云音乐</a>
-									<a class="button" href="https://mail.163.com" target="_blank">163邮箱</a>
-									<a class="button" href="https://wenku.baidu.com" target="_blank">百度文库</a>
-									<a class="button" href="https://jianshu.com" target="_blank">简书</a>
-									<a class="button" href="https://ximalaya.com" target="_blank">喜马拉雅</a>
-									<a class="button" href="https://www.iqiyi.com/" target="_blank">爱奇艺</a>
-									<a class="button" href="https://haokan.baidu.com/" target="_blank">好看视频</a>
-									<a class="button" href="https://news.sina.com.cn/" target="_blank">新浪新闻</a>
-									<a class="button" href="https://wikipedia.org/" target="_blank">Wikipedia</a>
-									<a class="button" href="https://wanweibaike.net" target="_blank">维基镜像版</a>
+								<section style="text-align: center;margin-bottom: 3rem;">
+									<span id="link-buttons">
+										<a href="https://github.com">GitHub</a>
+										<a href="https://www.youdao.com">有道词典</a>
+										<a href="https://map.baidu.com">百度地图</a>
+										<a href="https://bing.com/images">Bing图片</a>
+										<a href="https://pixabay.com">Pixabay</a>
+										<a href="https://bilibili.com">Bilibili</a>
+										<a href="https://www.csdn.net/">CSDN</a>
+										<a href="https://y.qq.com/">QQ音乐</a>
+										<a href="https://music.163.com">网易云音乐</a>
+										<a href="https://mail.163.com">163邮箱</a>
+										<a href="https://wenku.baidu.com">百度文库</a>
+										<a href="https://jianshu.com">简书</a>
+										<a href="https://ximalaya.com">喜马拉雅</a>
+										<a href="https://www.iqiyi.com/">爱奇艺</a>
+										<a href="https://news.sina.com.cn/">新浪新闻</a>
+										<a href="https://wikipedia.org/">Wikipedia</a>
+										<a href="https://wanweibaike.net">维基镜像版</a>
+									</span>
+									<a class="button primary" href="#add-link">添加</a>
 								</section>
+							</article>
+
+						<!-- Add Link Pop-up -->
+							<article id="add-link">
+								<h2 class="major">添加</h2>
+								<form>
+									<a class="button" href="#links">取消</a>
+								</form>
 							</article>
 
 						<!-- Sticky Notes -->
@@ -152,7 +162,7 @@
 									<p>仍然喜欢老版本的 NewTAB? <a href="1.0">NewTAB 1.0 >>></a></p>
 								</section>
 								<h3 class="major">大事记</h3>
-								<section>
+								<section style="max-height: 30vh;">
 									2021-10-10
 									<blockquote>修改了时间的样式</blockquote>
 									2021-10-08
@@ -224,16 +234,16 @@
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-			<script src="assets/js/header.js"></script>
-			<script src="assets/js/sticky.js"></script>
-
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+			<script src="assets/js/header.js"></script>
+			<script src="assets/js/sticky.js"></script>
+			<script src="assets/js/links.js"></script>
 	</body>
 </html>

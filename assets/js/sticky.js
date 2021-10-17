@@ -1,41 +1,41 @@
-const EMPTY = "无内容"
-const PLACEHOLDER  = "随便记点什么 ..."
+const EMPTY = "无内容";
+const PLACEHOLDER  = "随便记点什么 ...";
 
 function read()
 {
 	var content = localStorage.getItem("newtabSticky");
 	if (content == 0 || content == null)
 	{
-		document.getElementById("savelog").innerHTML = EMPTY;
-		document.getElementById("md").innerHTML = PLACEHOLDER;
+		$("#savelog").html(EMPTY);
+		$("#md").html(PLACEHOLDER);
 	}
 	else
 	{
-		document.getElementById("sticky").value = content;
-		document.getElementById("md").innerHTML = marked(content);
+		$("#sticky").val(content);
+		$("#md").html(marked(content));
 	}
 }
 
 function save()
 {
-	var content = document.getElementById("sticky").value;
+	var content = $("#sticky").val();
 	localStorage.setItem("newtabSticky", content);
 	if (content == 0 || content == null)
 	{
-		document.getElementById("savelog").innerHTML = EMPTY;
-		document.getElementById("md").innerHTML = PLACEHOLDER;
+		$("#savelog").html(EMPTY);
+		$("#md").html(PLACEHOLDER);
 	}
 	else
 	{
-		document.getElementById("md").innerHTML = marked(content);
-		document.getElementById("savelog").innerHTML = "已保存";
+		$("#md").html(marked(content));
+		$("#savelog").html("已保存");
 	}
 }
 
 function printnote()
 {
 	var p = window.open("打印", "_blank");
-	p.document.write(document.getElementById("md").innerHTML);
+	p.document.write($("#md").html());
 	p.document.close();
 	p.print();
 	p.close();
@@ -43,20 +43,16 @@ function printnote()
 
 function edit()
 {
-	document.getElementById("sticky").style.height = "20rem";
-	document.getElementById("sticky").style.padding = "0.75rem 1rem";
-	document.getElementById("sticky").style.border = "solid 1px #ffffff";
-	document.getElementById("md").style.display = "none";
-	document.getElementById("sticky").focus();
+	$("#sticky").css({"height": "20rem", "padding": "0.75rem 1rem", "border": "solid 1px #ffffff"});
+	$("#md").css("display", "none");
+	$("#sticky").focus();
 }
 
 function preview()
 {
-	document.getElementById("sticky").style.height = "0";
-	document.getElementById("sticky").style.padding = "0";
-	document.getElementById("sticky").style.border = "transparent";
-	document.getElementById("md").style.display = "block";
-	document.getElementById("sticky").focus();
+	$("#sticky").css({"height": "0", "padding": "0", "border": "transparent"});
+	$("#md").css("display", "block");
+	$("#sticky").focus();
 }
 
 read();
