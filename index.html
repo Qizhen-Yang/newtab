@@ -4,18 +4,20 @@
 		<title>NewTAB</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<link rel="stylesheet" href="assets/css/sticky.css"/>
+		<link rel="stylesheet" href="assets/css/weather.css"/>
+		<link rel="stylesheet" href="assets/css/contextmenu.css"/>
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
-		
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-				<!--Weather-->
+				<!-- Weather -->
 				<section>
-					<style>div[data-v-41ba7e2c], #weather-view-he[data-v-db6ccf64]{z-index: 10;font-family: 'Open Sans', 'Segoe UI', 'Microsoft Yahei UI', 'PingFang SC', sans-serif;}a[data-v-125f7284]{display: none;}</style>
 					<div id="he-plugin-simple"></div>
 					<script>
 					WIDGET = {
@@ -42,7 +44,6 @@
 					  }
 					}
 					</script>
-					<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 				</section>
 				<!-- Header -->
 					<header id="header">
@@ -50,10 +51,10 @@
 							<div class="inner">
 								<h1 id="time"></h1>
 								<h6 id="date"></h6>
-								<p>「便笺」增加了 Markdown 支持！</p>
+								<p>This is NewTAB 2.0</p>
 								<form action="javascript:search()">
 									<input type="submit" value="search" style="display:none;"/>
-									<input id="searchbox" type="text" placeholder="搜索" autocomplete="off"/>
+									<input id="searchbox" type="text" placeholder="搜索" autofocus autocomplete="off"/>
 									<select id="engines">
 										<option>百度</option>
 										<option>Bing</option>
@@ -67,7 +68,7 @@
 						<nav>
 							<ul>
 								<li><a href="#intro">简介</a></li>
-								<li><a href="#links">常用网址</a></li>
+								<li><a href="#links" >常用网址</a></li>
 								<li><a href="#stickynotes">便笺</a></li>
 							</ul>
 						</nav>
@@ -153,7 +154,7 @@
 								</section>
 							</article>
 						
-						<!--About-->
+						<!-- About -->
 							<article id="about">
 								<h2 class="major">关于</h2>
 								<section>
@@ -186,7 +187,7 @@
 								</section>
 							</article>
 
-						<!--Contact-->
+						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">联系</h2>
 								<section>
@@ -233,17 +234,33 @@
 		<!-- BG -->
 			<div id="bg"></div>
 
+		<!-- Context Menu -->
+			<div id="contextmenu">
+				<button>「新标签页不需要右键」</button>
+			</div>
+
 		<!-- Scripts -->
+			<!-- Basic -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<!-- Markdown -->
 			<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+			<!-- Main Scripts -->
 			<script src="assets/js/header.js"></script>
 			<script src="assets/js/sticky.js"></script>
 			<script src="assets/js/links.js"></script>
+			<script src="assets/js/contextmenu.js"></script>
+
+			<!-- Weather -->
+			<script>
+				window.onload = function() {
+					$("body").append("<script src='https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'/>");
+				};
+			</script>
 	</body>
 </html>

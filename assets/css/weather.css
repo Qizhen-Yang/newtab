@@ -1,0 +1,66 @@
+/* Main weather popup */
+#weather-view-he[data-v-db6ccf64] {
+	z-index: 5;
+	font-family: var(--font);
+	border-radius: 4px;
+	margin-left: 10px;
+	padding: 1rem !important;
+	height: calc(270px + 2rem) !important;
+	background-color: rgba(27, 31, 34, 0.85) !important;
+	background-image: none !important;
+}
+
+/* Link of weather source */
+.wv-lt-location > a[data-v-125f7284] {
+	color: var(--theme-color) !important;
+	text-decoration: none !important;
+}
+
+/* Select city */
+.wv-top-backdrop {
+	height: 100% !important;
+}
+
+select.wv-top-select[data-v-db6ccf64] {
+	display: inline-block;
+	background: none;
+	background-color: #353535;
+	border-color: rgba(255, 255, 255, 0.8);
+	width: calc(50% - 1rem);
+	height: 1.6rem;
+	min-height: 36px;
+	margin: auto;
+	text-align: center;
+	color: #ffffff;
+}
+	div.wv-top-col-12:first-child > select.wv-top-select[data-v-db6ccf64] {
+		margin-top: 1rem;
+	}
+	div.wv-top-col-12::before {
+		display: inline-block;
+		width: calc(50% - 1rem);
+		font-size: 1.2em;
+		text-align: left;
+	}
+	div.wv-top-col-12:nth-child(1)::before {	
+		content: "省级行政区";
+	}
+	div.wv-top-col-12:nth-child(2)::before {	
+		content: "市级行政区";
+	}
+	div.wv-top-col-12:nth-child(3)::before {	
+		content: "区级行政区";
+	}
+
+	select.wv-top-select[data-v-db6ccf64] option {
+		background-color: #353535;
+		color: #aaaaaa;
+	}
+	.wv-top-button {
+		background-color: var(--theme-color) !important;
+		border-radius: 4px;
+		line-height: inherit !important;
+		width: calc(100% - 2rem) !important;
+		height: 1.6rem;
+		min-height: 36px;
+	}

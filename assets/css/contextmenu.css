@@ -1,0 +1,18 @@
+#contextmenu {
+	width: 12rem;
+	z-index: 10;
+	position: fixed;
+	background-color: rgba(27, 31, 34, 0.85);
+	border-radius: 4px;
+	color: #ffffff;
+	text-align: center;
+	padding: 8px;
+}
+	#contextmenu > button {
+		margin: 0;
+		box-shadow: none;
+		width: 100%;
+		height: 2.4rem;
+		text-align: left;
+		padding: 0rem 1.25rem 0.6rem 1.35rem;
+	}

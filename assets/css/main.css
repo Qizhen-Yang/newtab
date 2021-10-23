@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+	--theme-color: #8B81C3;
+	--font: "Open Sans", "Segoe UI", "Microsoft Yahei UI", "PingFang SC", sans-serif;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -151,7 +156,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Open Sans", "Segoe UI", "Microsoft Yahei UI", "PingFang SC", sans-serif;
+		font-family: var(--font);
 		font-size: 0.8rem;
 		line-height: 1.65;
 	}
@@ -171,7 +176,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: var(--theme-color);
 		font-weight: 600;
 	}
 
@@ -1087,7 +1092,8 @@ input[type="radio"] + label:before {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ffffff;
+			box-shadow: none;
+			background-color: var(--theme-color);
 			color: #1b1f22 !important;
 			font-weight: 600;
 		}
