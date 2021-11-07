@@ -12,7 +12,7 @@ function read()
 	else
 	{
 		$("#sticky").val(content);
-		$("#md").html(marked(content));
+		$("#md").html(marked.parse(content));
 	}
 }
 
@@ -27,7 +27,7 @@ function save()
 	}
 	else
 	{
-		$("#md").html(marked(content));
+		$("#md").html(marked.parse(content));
 		$("#savelog").html("已保存");
 	}
 }
