@@ -3,7 +3,7 @@ const PLACEHOLDER  = "随便记点什么 ...";
 
 function read()
 {
-	var content = localStorage.getItem("newtabSticky");
+	let content = localStorage.getItem("newtabSticky");
 	if (content == 0 || content == null)
 	{
 		$("#savelog").html(EMPTY);
@@ -18,7 +18,7 @@ function read()
 
 function save()
 {
-	var content = $("#sticky").val();
+	let content = $("#sticky").val();
 	localStorage.setItem("newtabSticky", content);
 	if (content == 0 || content == null)
 	{
@@ -34,7 +34,7 @@ function save()
 
 function printnote()
 {
-	var p = window.open("打印", "_blank");
+	let p = window.open("打印", "_blank");
 	p.document.write($("#md").html());
 	p.document.close();
 	p.print();
