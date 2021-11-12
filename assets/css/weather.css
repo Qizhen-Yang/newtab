@@ -8,6 +8,7 @@
 	height: calc(270px + 2rem) !important;
 	background-color: rgba(27, 31, 34, 0.85) !important;
 	background-image: none !important;
+	backdrop-filter: blur(5px);
 }
 
 /* Link of weather source */
@@ -19,6 +20,7 @@
 /* Select city */
 .wv-top-backdrop {
 	height: 100% !important;
+	backdrop-filter: blur(5px);
 }
 
 select.wv-top-select[data-v-db6ccf64] {
