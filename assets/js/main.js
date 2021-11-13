@@ -502,3 +502,9 @@ function preview() {
 		if (e.target != $("#contextmenu")[0] && e.target != $("#contextmenu *")[0])
 			$("#contextmenu").fadeOut(200);	
 	}
+
+	// Change Log
+	var changelog = $("#changeLog").html().replaceAll("\t", "");
+	changelog = changelog.replaceAll("「", "「**");
+	changelog = changelog.replaceAll("」", "**」");
+	$("#changeLog").html(marked.parse(changelog));
