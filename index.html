@@ -1,273 +1,406 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>NewTAB</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
-		<link rel="stylesheet" href="assets/css/main.css"/>
-		<link rel="stylesheet" href="assets/css/sticky.css"/>
-		<link rel="stylesheet" href="assets/css/weather.css"/>
-		<link rel="stylesheet" href="assets/css/contextmenu.css"/>
+<head>
+	<title>NewTAB</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
-	</head>
-	<body class="is-preload">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/sticky.css" />
+	<link rel="stylesheet" href="assets/css/weather.css" />
+	<link rel="stylesheet" href="assets/css/contextmenu.css" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Weather -->
-				<section>
-					<div id="he-plugin-simple"></div>
-					<script>
-					WIDGET = {
-					  "CONFIG": {
-					    "modules": "102",
-					    "background": "5",
-					    "tmpColor": "FFFFFF",
-					    "tmpSize": "16",
-					    "cityColor": "FFFFFF",
-					    "citySize": "16",
-					    "aqiColor": "FFFFFF",
-					    "aqiSize": "16",
-					    "weatherIconSize": "24",
-					    "alertIconSize": "18",
-					    "padding": "10px 10px 10px 10px",
-					    "shadow": "0",
-					    "language": "auto",
-					    "fixed": "true",
-					    "vertical": "center",
-					    "horizontal": "center",
-					    "left": "10",
-					    "top": "10",
-					    "key": "d02d25dc9e674a1889a2af63fd10f1f5"
-					  }
-					};
-					</script>
-				</section>
-				<!-- Header -->
-					<header id="header">
-						<div class="content">
-							<div class="inner">
-								<h1 id="time"></h1>
-								<h6 id="date"></h6>
-								<p>This is NewTAB 2.0</p>
-								<form action="javascript:search()">
-									<input type="submit" value="search" style="display:none;"/>
-									<input id="searchbox" type="text" placeholder="搜索" autofocus autocomplete="off"/>
-									<select id="engines">
-										<option>百度</option>
-										<option>Bing</option>
-										<option>Google 镜像 (国内可用)</option>
-										<option>知乎</option>
-										<option>Google</option>
-									</select>
-								</form>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">简介</a></li>
-								<li><a href="#links" >常用网址</a></li>
-								<li><a href="#stickynotes">便笺</a></li>
-							</ul>
-						</nav>
-					</header>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-				<!-- Main -->
-					<div id="main">
+<body class="is-preload">
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">NewTAB&trade; 2.0</h2>
-								<section>
-									<p>「NewTAB」是一个简洁易用的新标签页。╰(*°▽°*)╯</p>
-									<p>这里收录了<a href="#">多个搜索引擎</a>以及<a href="#links">众多常用网站链接</a>。还有基于本地缓存的「便笺」。</p>
-									<p>整个网页在 Chromium 内核浏览器中表现效果最佳。</p>
-									<p>欢迎转发分享！</p>
-									<p>
-										GitHub 仓库: <a href="https://github.com/Qizhen-Yang/newtab">Qizhen-Yang/newtab</a>
-										<br/>
-										作者：<a href="https://qizhen-yang.cn/">Qizhen Yang</a>
-									</p>
-								</section>
-							</article>
-
-						<!-- Links -->
-							<article id="links">
-								<h2 class="major">常用网址</h2>
-								<section style="text-align: center;margin-bottom: 3rem;">
-									<span id="link-buttons">
-										<a href="https://github.com">GitHub</a>
-										<a href="https://www.youdao.com">有道词典</a>
-										<a href="https://map.baidu.com">百度地图</a>
-										<a href="https://bing.com/images">Bing图片</a>
-										<a href="https://pixabay.com">Pixabay</a>
-										<a href="https://bilibili.com">Bilibili</a>
-										<a href="https://www.csdn.net/">CSDN</a>
-										<a href="https://y.qq.com/">QQ音乐</a>
-										<a href="https://music.163.com">网易云音乐</a>
-										<a href="https://mail.163.com">163邮箱</a>
-										<a href="https://wenku.baidu.com">百度文库</a>
-										<a href="https://jianshu.com">简书</a>
-										<a href="https://ximalaya.com">喜马拉雅</a>
-										<a href="https://www.iqiyi.com/">爱奇艺</a>
-										<a href="https://news.sina.com.cn/">新浪新闻</a>
-										<a href="https://wikipedia.org/">Wikipedia</a>
-										<a href="https://wanweibaike.net">维基镜像版</a>
-									</span>
-									<a class="button primary" href="#add-link">添加</a>
-								</section>
-							</article>
-
-						<!-- Add Link Pop-up -->
-							<article id="add-link">
-								<h2 class="major">添加</h2>
-								<form>
-									<a class="button" href="#links">取消</a>
-								</form>
-							</article>
-
-						<!-- Sticky Notes -->
-							<article id="stickynotes">
-								<section>
-									<h6 id="savelog">已从本地读取</h6>
-									<textarea id="sticky" oninput="edit();save();" onblur="preview()"></textarea>
-
-									<section id="md" onclick="edit()" oncontextmenu="edit()"></section>
-
-									<a class="button primary" onclick="javascript:printnote()">打印</a>
-									<a class="button" onclick="javascript:document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
-									<a class="button" href="#stickyguide">帮助</a>
-								</section>
-							</article>
-
-						<!--Sticky Notes Guide-->
-							<article id="stickyguide">
-								<h2 class="major">「便笺」指南</h2>
-								<section>
-									<p>便笺内容仅保存到「本地缓存」, 没有任何云端存储</p>
-									<p><strong>清除浏览器缓存可能会造成内容永久丢失</strong></p>
-									<p>部分浏览器不支持「打印」功能。: (</p>
-									<p>增加了 Markdown 支持，不在编辑模式中时会自动显示预览</p>
-									<a href="#stickynotes" class="button primary">回到「便笺」</a>
-								</section>
-							</article>
-						
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">关于</h2>
-								<section>
-									<p>来自「必应每日一图」的背景图像仅供个人使用</p>
-									<p>如果你是此标签页中有所链接 / 提及的网站的作者 / 管理员 / 所有者，且你认为你的网站在此处出现有所不妥，请<a href="#contact">联系我</a>，我将第一时间处理。ヾ(•ω•`)o</p>
-									<p>仍然喜欢老版本的 NewTAB? <a href="1.0">NewTAB 1.0 >>></a></p>
-									<p><a href="#problems">已知的兼容性问题 >>></a></p>
-								</section>
-								<h3 class="major">大事记</h3>
-								<section style="max-height: 25vh;">
-									2021-10-10
-									<blockquote>修改了时间的样式</blockquote>
-									2021-10-08
-									<blockquote>「便笺」增加 Markdown 支持</blockquote>
-									2021-10-07
-									<blockquote>CSS 大改动 <br/> 加入「便笺」 <br/> 修改滚动条样式 <br/> 加入「大事记」</blockquote>
-									2021-10-05
-									<blockquote>调整字体 <br/> 尝试增加访问速度</blockquote>
-									2021-10-02
-									<blockquote>创建 NewTAB 2.0 (●'◡'●)</blockquote>
-									2021-01-15
-									<blockquote>找到了一个稳定的 Google 镜像</blockquote>
-									2020-11-15
-									<blockquote>调整布局 <br/> 改善搜索框的外观</blockquote>
-									2020-11-07
-									<blockquote>加入「毛玻璃」特效 <br/> 添加搜索框</blockquote>
-									2020-10-24
-									<blockquote>网页上开始显示时间</blockquote>
-									2020-10-22
-									<blockquote>创建 NewTAB 1.0</blockquote>
-								</section>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">联系</h2>
-								<section>
-									<a href="mailto:alejandro_yang@yeah.net">
-										<img src="https://img.icons8.com/fluency/48/000000/email-open.png"/>
-									</a>
-									<a href="https://github.com/Qizhen-Yang">
-										<img src="https://img.icons8.com/fluency/48/000000/github.png"/>
-									</a>
-									<a href="https://twitter.com/YangQizhen">
-										<img src="https://img.icons8.com/fluency/48/000000/twitter-circled.png"/>
-									</a>
-								</section>
-							</article>
-						
-						<!-- Problems -->
-							<article id="problems">
-								<h2 class="major">已知的兼容性问题</h2>
-								<section>
-									<blockquote>
-										测试环境为最新版本 Chromium 内核浏览器
-										<br/>
-										因此此页面对于 Chromium 内核浏览器支持最好
-									</blockquote>
-									<ul>
-										<li>「毛玻璃」效果不被所有浏览器 / 显卡所支持</li>
-										<li>一些比较特殊的分辨率下可能排版有所影响</li>
-										<li>除 Chromium 内核浏览器外 滚动条只能使用默认的</li>
-										<li>本地缓存内容会随着「Cookies」或「缓存」的清除而同时被删除 (包括「便笺」内容)</li>
-										<li>IE 9 以下版本许多动画效果 / 滤镜都无法正常显示</li>
-									</ul>
-								</section>
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">
-							&copy; 2020~2021 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.
-							|
-							Based on the design of <a href="https://html5up.net">HTML5 UP</a>.
-							|
-							Icons by <a href="https://icons8.com">Icons8</a>.
-							|
-							<a href="#about">关于</a>
-							|
-							<a href="#contact">联系</a>
-							|
-							<a href="https://api.kdcc.cn/img/" target="_blank">背景图片地址</a>
-						</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Context Menu -->
-			<div id="contextmenu">
-				<p>「右键菜单」规划中…</p>
-			</div>
-
-		<!-- Scripts -->
-			<!-- Basic -->
-			<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-
-			<!-- Main -->
-			<script src="assets/js/main.js"></script>
-
-			<!-- Weather -->
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Weather -->
+		<section>
+			<div id="he-plugin-simple"></div>
 			<script>
-				window.onload = function () {
-					$("body").append("<script src='https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'/>");
+				WIDGET = {
+					"CONFIG": {
+						"modules": "102",
+						"background": "5",
+						"tmpColor": "FFFFFF",
+						"tmpSize": "16",
+						"cityColor": "FFFFFF",
+						"citySize": "16",
+						"aqiColor": "FFFFFF",
+						"aqiSize": "16",
+						"weatherIconSize": "24",
+						"alertIconSize": "18",
+						"padding": "10px 10px 10px 10px",
+						"shadow": "0",
+						"language": "auto",
+						"fixed": "true",
+						"vertical": "center",
+						"horizontal": "center",
+						"left": "10",
+						"top": "10",
+						"key": "d02d25dc9e674a1889a2af63fd10f1f5"
+					}
 				};
 			</script>
-	</body>
+		</section>
+		<!-- Header -->
+		<header id="header">
+			<div class="content">
+				<div class="inner">
+					<h1 id="time"></h1>
+					<h6 id="date"></h6>
+					<p>This is NewTAB 2.0</p>
+					<form action="javascript:search()">
+						<input type="submit" value="search" style="display:none;" />
+						<input id="searchbox" type="text" placeholder="搜索" autofocus autocomplete="off" />
+						<select id="engines">
+							<option>百度</option>
+							<option>Bing</option>
+							<option>Google 镜像 (国内可用)</option>
+							<option>知乎</option>
+							<option>Google</option>
+						</select>
+					</form>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#intro">简介</a></li>
+					<li><a href="#links">常用网址</a></li>
+					<li><a href="#stickynotes">便笺</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Intro -->
+			<article id="intro">
+				<h2 class="major">NewTAB&trade; 2.0</h2>
+				<section>
+					<p>「NewTAB」是一个简洁易用的新标签页。╰(*°▽°*)╯</p>
+					<p>这里收录了<a href="#">多个搜索引擎</a>以及<a href="#links">众多常用网站链接</a>。还有基于本地缓存的「便笺」。</p>
+					<p>整个网页在 Chromium 内核浏览器中表现效果最佳。</p>
+					<p>欢迎转发分享！</p>
+					<p>
+						GitHub 仓库: <a href="https://github.com/Qizhen-Yang/newtab">Qizhen-Yang/newtab</a>
+						<br />
+						作者：<a href="https://qizhen-yang.cn/">Qizhen Yang</a>
+					</p>
+				</section>
+			</article>
+
+			<!-- Links -->
+			<article id="links">
+				<h2 class="major">常用网址</h2>
+				<section style="text-align: center;margin-bottom: 3rem;">
+					<span id="link-buttons">
+						<a href="https://github.com">GitHub</a>
+						<a href="https://www.youdao.com">有道词典</a>
+						<a href="https://map.baidu.com">百度地图</a>
+						<a href="https://bing.com/images">Bing图片</a>
+						<a href="https://pixabay.com">Pixabay</a>
+						<a href="https://bilibili.com">Bilibili</a>
+						<a href="https://www.csdn.net/">CSDN</a>
+						<a href="https://y.qq.com/">QQ音乐</a>
+						<a href="https://music.163.com">网易云音乐</a>
+						<a href="https://mail.163.com">163邮箱</a>
+						<a href="https://wenku.baidu.com">百度文库</a>
+						<a href="https://jianshu.com">简书</a>
+						<a href="https://ximalaya.com">喜马拉雅</a>
+						<a href="https://www.iqiyi.com/">爱奇艺</a>
+						<a href="https://news.sina.com.cn/">新浪新闻</a>
+						<a href="https://wikipedia.org/">Wikipedia</a>
+						<a href="https://wanweibaike.net">维基镜像版</a>
+					</span>
+					<a class="button primary" href="#add-link">添加</a>
+				</section>
+			</article>
+
+			<!-- Add Link Pop-up -->
+			<article id="add-link">
+				<h2 class="major">添加</h2>
+				<form>
+					<a class="button" href="#links">取消</a>
+				</form>
+			</article>
+
+			<!-- Sticky Notes -->
+			<article id="stickynotes">
+				<section>
+					<h6 id="savelog">已从本地读取</h6>
+					<textarea id="sticky" oninput="edit();save();" onblur="preview()"></textarea>
+
+					<section id="md" onclick="edit()" oncontextmenu="edit()"></section>
+
+					<a class="button primary" onclick="javascript:printnote()">打印</a>
+					<a class="button"
+						onclick="javascript:document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
+					<a class="button" href="#stickyguide">帮助</a>
+				</section>
+			</article>
+
+			<!--Sticky Notes Guide-->
+			<article id="stickyguide">
+				<h2 class="major">「便笺」指南</h2>
+				<section>
+					<p>便笺内容仅保存到「本地缓存」, 没有任何云端存储</p>
+					<p><strong>清除浏览器缓存可能会造成内容永久丢失</strong></p>
+					<p>部分浏览器不支持「打印」功能。: (</p>
+					<p>增加了 Markdown 支持，不在编辑模式中时会自动显示预览</p>
+					<a href="#stickynotes" class="button primary">回到「便笺」</a>
+				</section>
+			</article>
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">NewTAB 2.0</h2>
+				<section>
+					<p>最后修改<code>2021-11-13</code></p>
+					<p><a href="#used">本页面使用到的外部内容 >>></a></p>
+					<p>
+						<a href="#contact" class="button">联系我</a>
+						<a href="1.0" class="button" targer="_blank">NewTAB 1.0</a>
+						<a href="#problems" class="button">兼容性问题</a>
+					</p>
+				</section>
+				<h3 class="major">大事记</h3>
+				<section id="changeLog" style="max-height: 25vh;">
+					2021-11-13
+
+					- 修改主题色
+					- 去除部分「毛玻璃」减少卡顿和意外 bug
+					- 合并多个 JavaScript，增加访问速度
+					- 重写「大事记」以及其它页面部分
+
+					2021-11-12
+
+					- 优化访问速度
+					- 重新添加「毛玻璃」效果
+
+					2021-11-10
+
+					- 增加「兼容性问题说明」
+
+					2021-10-23
+					- 添加「右键菜单」(暂无内容)
+					- 改动「天气」界面样式
+
+					2021-10-17
+
+					- 为自定义链接做准备
+					- 使用了 jQuery
+
+					2021-10-11
+
+					- 修复了时间无法自动更新的问题
+					- 尝试优化「天气」的字体
+					2021-10-10
+
+					- 合并部分 JavaScript
+					- 「时间」和「日期」分开显示在两行
+
+					2021-10-08
+
+					- 「便笺」加入 Markdown 语法支持
+					- 现在「Markdown 预览」会在输入框失去焦点后自动替换在输入框的位置
+
+					2021-10-07
+
+					- 设计大改动
+					- 添加「便笺」功能
+					- 将 5 个搜索框合并，改用下拉列表
+					- 文字更通顺了
+					- 修改滚动条样式 (仅 Chromium 内核浏览器可用)
+
+					2021-10-05
+
+					- 删除「Font Awesome」字体
+
+					2021-10-03
+
+					- 修改字体为「Open Sans」
+
+					2021-10-02
+
+					- 创建「NewTAB 2.0」
+					- 将原有页面迁移至 `/1.0` 目录下
+
+					2021-03-13 ~ 2021-06-15
+
+					- 不断寻找更好的谷歌镜像
+					- 完善相关说明
+
+					2021-01-27
+
+					- 找到了一个稳定的 Google 镜像
+					- 正式加入「搜索谷歌镜像」和「问谷歌」的输入框
+
+					2021-01-10
+
+					- 删除多语言
+					- 调整界面设计
+					- 增加 404 页面
+
+					2020-12-04
+
+					- 增加「繁体中文」和「English」页面
+
+					2020-12-03
+
+					- 添加至 5 个搜索引擎
+					- 调整页脚
+
+					2020-12-02
+
+					- 为多语言做准备
+
+					2020-11-15
+
+					- 调整布局，让按钮分布更均匀
+
+					2020-11-08
+
+					- 修改了输入框的样式
+
+					2020-11-07
+
+					- 添加「百度」和「Bing」搜索框
+					- 添加「毛玻璃」效果
+
+					2020-10-24
+
+					- 左侧栏加入「时间」
+					- 为搜索框增加预留空间
+
+					2020-10-22
+
+					- 「NewTAB」上线！
+				</section>
+			</article>
+
+			<!-- Used -->
+			<article id="used">
+				<h2>外部内容</h2>
+				<section>
+					<a href="https://twitter.com/@ajlkn">@ajlkn</a>
+					<ul>
+						<li>Responsive Tools</li>
+						<li>breakpoints.js</li>
+						<li>browser.js</li>
+						<li>main.js (弹出窗口 & 兼容性部分)</li>
+						<li>util.js</li>
+					</ul>
+					<a href="https://www.bing.com">必应</a>
+					<ul>
+						<li>「每日一图」</li>
+					</ul>
+					<a href="https://qweather.com">和风天气</a>
+					<ul>
+						<li>天气简约插件</li>
+					</ul>
+					<p>来自 <a href="https://icons8.com">Icons8</a> 的图标</p>
+					其它
+					<ul>
+						<li>jquery.js</li>
+						<li>marked.js</li>
+					</ul>
+				</section>
+				<a href="#about" class="button">返回</a>
+			</article>
+
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">联系</h2>
+				<section>
+					<ul class="icons">
+						<li>
+							<a href="mailto:alejandro_yang@yeah.net" title="Alejandro_Yang@yeah.net">
+								<img src="https://img.icons8.com/fluency/48/000000/email-open.png" />
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Qizhen-Yang" title="@Qizhen-Yang">
+								<img src="https://img.icons8.com/fluency/48/000000/github.png" />
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/YangQizhen" title="@YangQizhen">
+								<img src="https://img.icons8.com/fluency/48/000000/twitter-circled.png" />
+							</a>
+						</li>
+					</ul>
+				</section>
+			</article>
+
+			<!-- Problems -->
+			<article id="problems">
+				<h2 class="major">已知的兼容性问题</h2>
+				<section>
+					<blockquote>
+						测试环境为最新版本 Chromium 内核浏览器
+						<br />
+						因此此页面对于 Chromium 内核浏览器支持最好
+					</blockquote>
+					<ul>
+						<li>「毛玻璃」效果不被所有浏览器 / 显卡所支持</li>
+						<li>一些比较特殊的分辨率下可能排版有所影响</li>
+						<li>除 Chromium 内核浏览器外 滚动条只能使用默认的</li>
+						<li>本地缓存内容会随着「Cookies」或「缓存」的清除而同时被删除 (包括「便笺」内容)</li>
+						<li>IE 9 以下版本许多动画效果 / 滤镜都无法正常显示</li>
+					</ul>
+				</section>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">
+				&copy; 2020~2021 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.
+				|
+				<a href="#about">关于</a>
+				|
+				<a href="#contact">联系</a>
+				|
+				<a href="https://api.kdcc.cn/img/" target="_blank">背景图片地址</a>
+			</p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Context Menu -->
+	<div id="contextmenu">
+		<p>「右键菜单」规划中…</p>
+	</div>
+
+	<!-- Scripts -->
+	<!-- Basic -->
+	<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/markedjs/marked@latest/marked.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+
+	<!-- Main -->
+	<script src="assets/js/main.js"></script>
+
+	<!-- Weather -->
+	<script>
+		window.onload = function () {
+			$("body").append("<script src='https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'/>");
+		};
+	</script>
+</body>
+
 </html>
