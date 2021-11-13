@@ -1,3 +1,5 @@
+// Main stuff and Popup windows
+
 (function($) {
 
 	var	$window = $(window),
@@ -300,14 +302,6 @@
 			});
 
 		// Events.
-			$body.on('click', function(event) {
-
-				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
-						$main._hide(true);
-
-			});
-
 			$window.on('keyup', function(event) {
 
 				switch (event.keyCode) {
@@ -393,3 +387,118 @@
 					});
 
 })(jQuery);
+
+// Date & Time
+function fix(num, length) {
+	return ('' + num).length < length ? ((new Array(length + 1)).join('0') + num).slice(-length) : '' + num;
+}
+
+function setdate() {
+	date = new Date();
+	document.getElementById('time').innerText = fix(date.getHours(), 2) + ":" + fix(date.getMinutes(), 2);
+	document.getElementById('date').innerText = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
+}
+
+// Search
+function search() {
+	var n = document.getElementById("engines").selectedIndex;
+	var url = [
+			"https://www.baidu.com/s?wd=",
+			"https://www.bing.com/search?q=",
+			"https://goo.gle.workers.dev/search?q=",
+			"https://www.zhihu.com/search?q=",
+			"https://www.google.com/search?q="];
+	window.open(url[n] + document.getElementById("searchbox").value);
+	document.getElementById("searchbox").value = "";
+}
+
+// Links
+function formatLinks() {
+	$("#link-buttons").children("a").addClass("button");
+	$("#link-buttons").children("a").attr("target", "_blank");
+}
+
+function readLinks() {
+	var links = localStorage.getItem("newtabLinks");
+	if (links != 0 && links != null) {
+		$("#link-buttons").html(links);
+	}
+}
+
+function saveLinks() {
+	var links = $("#link-buttons").html();
+	localStorage.setItem("newtabLinks", links);
+}
+
+// Sticky
+const EMPTY = "无内容";
+const PLACEHOLDER  = "随便记点什么 ...";
+
+function read() {
+	let content = localStorage.getItem("newtabSticky");
+	if (content == 0 || content == null) {
+		$("#savelog").html(EMPTY);
+		$("#md").html(PLACEHOLDER);
+	}
+	else {
+		$("#sticky").val(content);
+		$("#md").html(marked.parse(content));
+	}
+}
+
+function save() {
+	let content = $("#sticky").val();
+	localStorage.setItem("newtabSticky", content);
+	if (content == 0 || content == null) {
+		$("#savelog").html(EMPTY);
+		$("#md").html(PLACEHOLDER);
+	}
+	else {
+		$("#md").html(marked.parse(content));
+		$("#savelog").html("已保存");
+	}
+}
+
+function printnote() {
+	let p = window.open("打印", "_blank");
+	p.document.write($("#md").html());
+	p.document.close();
+	p.print();
+	p.close();
+}
+
+function edit() {
+	$("#sticky").css({"height": "20rem", "padding": "0.75rem 1rem", "border": "solid 1px #ffffff"});
+	$("#md").css("display", "none");
+	$("#sticky").focus();
+}
+
+function preview() {
+	$("#sticky").css({"height": "0", "padding": "0", "border": "transparent"});
+	$("#md").css("display", "block");
+	$("#sticky").focus();
+}
+
+// Onload
+	// Date & Time
+	setInterval("setdate();", 1000);
+
+	// Links
+	formatLinks();
+	
+	// Sticky
+	read();
+	preview();
+
+	// Contextmenu
+	$("#contextmenu").hide();
+	document.oncontextmenu = function (e) {
+		$("#contextmenu").css({"left": e.pageX, "top": e.pageY});
+		$("#contextmenu").fadeIn(200);
+		return false;
+	}
+	
+	document.onclick = function (e) {
+		if (e.target != $("#contextmenu")[0] && e.target != $("#contextmenu *")[0])
+			$("#contextmenu").fadeOut(200);	
+	}
