@@ -424,7 +424,6 @@ textarea {
 	padding: 0 1rem;
 	text-decoration: none;
 	width: 100%;
-	backdrop-filter: blur(5px);
 }
 
 	input[type="text"]:invalid,
@@ -1386,7 +1385,6 @@ input[type="radio"] + label:before {
 					letter-spacing: 0.1rem;
 					font-size: 0.8rem;
 					border-bottom: 0;
-					backdrop-filter: blur(5px);
 				}
 
 					#header nav ul li a:hover {
@@ -1568,7 +1566,6 @@ input[type="radio"] + label:before {
 			width: 40rem;
 			max-width: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
-			backdrop-filter: blur(10px);
 			border-radius: 4px;
 			opacity: 0;
 		}
