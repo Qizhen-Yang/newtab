@@ -401,15 +401,15 @@ function setdate() {
 
 // Search
 function search() {
-	var n = document.getElementById("engines").selectedIndex;
+	var n = $("option:selected", "#engines").index();
 	var url = [
 			"https://www.baidu.com/s?wd=",
 			"https://www.bing.com/search?q=",
 			"https://goo.gle.workers.dev/search?q=",
 			"https://www.zhihu.com/search?q=",
 			"https://www.google.com/search?q="];
-	window.open(url[n] + document.getElementById("searchbox").value);
-	document.getElementById("searchbox").value = "";
+	window.open(url[n] + $("#searchbox").val());
+	$("#searchbox").val("");
 }
 
 // Links
@@ -468,13 +468,13 @@ function printnote() {
 }
 
 function edit() {
-	$("#sticky").css({"height": "20rem", "padding": "0.75rem 1rem", "border": "solid 1px #ffffff"});
+	$("#sticky").css({"height": "20rem", "padding": "0.75rem 1rem"});
 	$("#md").css("display", "none");
 	$("#sticky").focus();
 }
 
 function preview() {
-	$("#sticky").css({"height": "0", "padding": "0", "border": "transparent"});
+	$("#sticky").css({"height": "0", "padding": "0"});
 	$("#md").css("display", "block");
 	$("#sticky").focus();
 }
@@ -491,17 +491,16 @@ function preview() {
 	preview();
 
 	// Contextmenu
-	$("#contextmenu").hide();
-	document.oncontextmenu = function (e) {
+	$("*").contextmenu(function (e) {
 		$("#contextmenu").css({"left": e.pageX, "top": e.pageY});
 		$("#contextmenu").fadeIn(200);
 		return false;
-	}
+	});
 	
-	document.onclick = function (e) {
-		if (e.target != $("#contextmenu")[0] && e.target != $("#contextmenu *")[0])
+	$("*").click(function (e) {
+		if (e.target != $("#contextmenu")[0])
 			$("#contextmenu").fadeOut(200);	
-	}
+	});
 
 	// Change Log
 	var changelog = $("#changeLog").html().replaceAll("\t", "");

@@ -26,13 +26,12 @@
 			<script>
 				WIDGET = {
 					"CONFIG": {
-						"modules": "102",
+						"modules": "1024",
 						"background": "5",
 						"tmpColor": "FFFFFF",
 						"tmpSize": "16",
 						"cityColor": "FFFFFF",
 						"citySize": "16",
-						"aqiColor": "FFFFFF",
 						"aqiSize": "16",
 						"weatherIconSize": "24",
 						"alertIconSize": "18",
@@ -53,8 +52,8 @@
 		<header id="header">
 			<div class="content">
 				<div class="inner">
-					<h1 id="time"></h1>
-					<h6 id="date"></h6>
+					<h1 id="time" style="font-size: 3rem;"></h1>
+					<h4 id="date"></h4>
 					<p>This is NewTAB 2.0</p>
 					<form action="javascript:search()">
 						<input type="submit" value="search" style="display:none;" />
@@ -127,6 +126,7 @@
 			<!-- Add Link Pop-up -->
 			<article id="add-link">
 				<h2 class="major">添加</h2>
+				<p>Coming soon</p>
 				<form>
 					<a class="button" href="#links">取消</a>
 				</form>
@@ -142,7 +142,7 @@
 
 					<a class="button primary" onclick="javascript:printnote()">打印</a>
 					<a class="button"
-						onclick="javascript:document.getElementById('sticky').value = '';save();document.getElementById('savelog').innerHTML = EMPTY;">清空</a>
+						onclick="javascript:$('#sticky').val('');save();$('#savelog').html(EMPTY);">清空</a>
 					<a class="button" href="#stickyguide">帮助</a>
 				</section>
 			</article>
@@ -173,6 +173,14 @@
 				</section>
 				<h3 class="major">大事记</h3>
 				<section id="changeLog" style="max-height: 25vh;">
+					2021-11-14
+
+					- 重写「按钮」和「输入框」的样式
+					- 微调页面字体
+					- 调整圆角大小
+					- 去除不必要的视觉干扰
+					- 左上角「天气」中加入「空气质量」
+
 					2021-11-13
 
 					- 修改主题色
@@ -381,7 +389,19 @@
 
 	<!-- Context Menu -->
 	<div id="contextmenu">
-		<p>「右键菜单」规划中…</p>
+		<a href="#links" class="button">
+			<img src="https://img.icons8.com/fluency/48/000000/link.png"/>
+			常用网址
+		</a>
+		<a href="#stickynotes" class="button">
+			<img src="https://img.icons8.com/fluency/48/000000/sticky-notes.png"/>
+			便笺
+		</a>
+		<hr/>
+		<a href="#about" class="button">
+			<img src="https://img.icons8.com/fluency/48/000000/info.png"/>
+			关于 NewTAB
+		</a>
 	</div>
 
 	<!-- Scripts -->
