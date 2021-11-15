@@ -5,6 +5,16 @@
 	--font: "Open Sans", "Segoe UI", "Microsoft Yahei UI", "PingFang SC", sans-serif;
 }
 
+@keyframes jump {
+	from {transform: translateY(0);}
+	to {transform: translateY(-0.05rem);}
+}
+
+@-webkit-keyframes jump {
+	from {-webkit-transform: translateY(0);}
+	to {-webkit-transform: translateY(-0.05rem);}
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -453,6 +463,10 @@ textarea {
 	textarea:focus {
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 		background-color: rgba(0, 0, 0, 0.1);
+		-webkit-animation: jump 0.2s ease-in-out alternate;
+		-webkit-animation-iteration-count: 2;
+		animation: jump 0.2s ease-in-out alternate;
+		animation-iteration-count: 2;
 	}
 
 select {
