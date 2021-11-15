@@ -52,8 +52,8 @@
 		<header id="header">
 			<div class="content">
 				<div class="inner">
-					<h1 id="time" style="font-size: 3rem;"></h1>
-					<h4 id="date"></h4>
+					<h1 id="time" style="font-size: 3rem;">&nbsp;</h1>
+					<h4 id="date">&nbsp;</h4>
 					<p>This is NewTAB 2.0</p>
 					<form action="javascript:search()">
 						<input type="submit" value="search" style="display:none;" />
@@ -163,7 +163,7 @@
 			<article id="about">
 				<h2 class="major">NewTAB 2.0</h2>
 				<section>
-					<p>最后修改<code>2021-11-14</code></p>
+					<p>最后修改<code>2021-11-15</code></p>
 					<p><a href="#used">本页面使用到的外部内容 >>></a></p>
 					<p>
 						<a href="#contact" class="button">联系我</a>
@@ -175,8 +175,9 @@
 				<section id="changeLog" style="max-height: 25vh;">
 					2021-11-15
 
-					- 文本框进入输入时会出现「弹跳」动画
-					- 调整文本框的透明度
+					- 输入框进入输入时会出现「弹跳」动画
+					- 调整输入框的透明度
+					- Fix: 页面上的「时间」和「日期」使得页面加载动画卡顿的问题
 
 					2021-11-14
 
@@ -190,7 +191,7 @@
 					2021-11-13
 
 					- 修改主题色
-					- 去除部分「毛玻璃」减少卡顿和意外 bug
+					- Fix: 「毛玻璃」造成的卡顿
 					- 合并多个 JavaScript，增加访问速度
 					- 重写「大事记」以及其它页面部分
 
@@ -214,8 +215,9 @@
 
 					2021-10-11
 
-					- 修复了时间无法自动更新的问题
+					- Fix: 时间无法自动更新的问题
 					- 尝试优化「天气」的字体
+
 					2021-10-10
 
 					- 合并部分 JavaScript
