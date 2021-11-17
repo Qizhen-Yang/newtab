@@ -7,12 +7,12 @@
 
 @keyframes jump {
 	from {transform: translateY(0);}
-	to {transform: translateY(-0.05rem);}
+	to {transform: translateY(-0.015rem);}
 }
 
 @-webkit-keyframes jump {
 	from {-webkit-transform: translateY(0);}
-	to {-webkit-transform: translateY(-0.05rem);}
+	to {-webkit-transform: translateY(-0.015rem);}
 }
 
 html, body, div, span, applet, object,
