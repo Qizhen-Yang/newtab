@@ -56,6 +56,11 @@
 					<h4 id="date">&nbsp;</h4>
 					<p>This is NewTAB 2.0</p>
 					<form action="javascript:search()">
+						<style>
+							input#searchbox {
+								transition: all 0.5s;
+							}
+						</style>
 						<input type="submit" value="search" style="display:none;" />
 						<input id="searchbox" type="text" placeholder="搜索" autofocus autocomplete="off" />
 						<select id="engines">
