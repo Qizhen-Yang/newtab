@@ -507,3 +507,6 @@ function preview() {
 	changelog = changelog.replaceAll("「", "「**");
 	changelog = changelog.replaceAll("」", "**」");
 	$("#changeLog").html(marked.parse(changelog));
+
+	// Searchbox
+	$("#searchbox").focus();
