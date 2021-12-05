@@ -55,10 +55,13 @@
 					<h1 id="time" style="font-size: 3rem;">&nbsp;</h1>
 					<h4 id="date">&nbsp;</h4>
 					<p>This is NewTAB 2.0</p>
-					<form action="javascript:search()">
-						<input type="submit" value="search" style="display:none;" />
-						<input id="searchbox" type="text" placeholder="搜索" autocomplete="off" />
-						<select id="engines">
+					<form action="javascript:search()"
+						style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
+						<input type="submit" value="search" style="display:none;"/>
+						<input id="searchbox" type="text" placeholder="搜索" autocomplete="off"
+							style="border-radius: 4px 4px 0 0; backdrop-filter: none; -webkit-backdrop-filter: none;"/>
+						<select id="engines"
+							style="border-radius: 0 0 4px 4px; backdrop-filter: none; -webkit-backdrop-filter: none;">
 							<option>百度</option>
 							<option>Bing</option>
 							<option>Google 镜像 (国内可用)</option>
