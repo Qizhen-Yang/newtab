@@ -403,12 +403,17 @@ function setdate() {
 function search() {
 	var n = $("option:selected", "#engines").index();
 	var url = [
-			"https://www.baidu.com/s?wd=",
+			"https://www.baidu.com/s?ie=utf-8&wd=",
 			"https://www.bing.com/search?q=",
 			"https://goo.gle.workers.dev/search?q=",
 			"https://www.zhihu.com/search?q=",
 			"https://www.google.com/search?q="];
-	window.open(url[n] + $("#searchbox").val());
+	var content = $("#searchbox").val();
+	content = content.replaceAll("+", "%2b");
+	content = content.replaceAll("%", "%25");
+	content = content.replaceAll("&", "%26");
+	content = content.replaceAll("#", "%23");
+	window.open(url[n] + content);
 	$("#searchbox").val("");
 }
 
@@ -481,6 +486,7 @@ function preview() {
 
 // Onload
 	// Date & Time
+	setdate();
 	setInterval("setdate();", 1000);
 
 	// Links
@@ -502,11 +508,9 @@ function preview() {
 			$("#contextmenu").fadeOut(200);	
 	});
 
-	// Change Log
-	var changelog = $("#changeLog").html().replaceAll("\t", "");
-	changelog = changelog.replaceAll("「", "「**");
-	changelog = changelog.replaceAll("」", "**」");
-	$("#changeLog").html(marked.parse(changelog));
-
 	// Searchbox
 	$("#searchbox").focus();
+
+// Console output
+console.log("%cNewTAB 2.0\n欢迎来到 NewTAB!\n自 2020-10-22 起上线运行", "color: #86C166; font-family: 'Open Sans', 'Segoe UI', 'Microsoft Yahei UI', 'PingFang SC', sans-serif; line-height: 1.65;");
+console.log("%c© 2021 Qizhen Yang.", "color: #ffffff; font-family: 'Open Sans', 'Segoe UI', 'Microsoft Yahei UI', 'PingFang SC', sans-serif; line-height: 1.65;");

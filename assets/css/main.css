@@ -5,6 +5,17 @@
 	--font: "Open Sans", "Segoe UI", "Microsoft Yahei UI", "PingFang SC", sans-serif;
 }
 
+@media screen and (max-width: 1920px) {
+	:root {
+		--bg-img: url("https://retiehe.com/backend/bing/1080p");
+	}
+}
+@media screen and (min-width: 1920px) {
+	:root {
+		--bg-img: url("https://retiehe.com/backend/bing/4k");
+	}
+}
+
 @keyframes jump {
 	from {transform: translateY(0);}
 	to {transform: translateY(-0.015rem);}
@@ -1179,25 +1190,18 @@ input[type="radio"] + label:before {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto,
- 256px 256px;
-			background-position: center,
- center;
-			background-repeat: no-repeat,
- repeat;
+			-moz-transform: scale(1.125);
+			-webkit-transform: scale(1.125);
+			-ms-transform: scale(1.125);
+			transform: scale(1.125);
+			background-image: radial-gradient(transparent, rgba(19, 21, 25, 1)), var(--bg-img);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 			z-index: 2;
 		}
 
-		#bg:after {
+/*		#bg:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
@@ -1206,14 +1210,15 @@ input[type="radio"] + label:before {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("https://api.kdcc.cn/img/");
+			background-image: var(--bg-img);
+			background-color: #ffffff;
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
-		}
+		} */
 
-		body.is-article-visible #bg:after {
+		body.is-article-visible #bg:before {
 			-moz-transform: scale(1.0825);
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
@@ -1302,10 +1307,6 @@ input[type="radio"] + label:before {
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		max-width: 100%;
 		text-align: center;
 	}
@@ -1344,14 +1345,10 @@ input[type="radio"] + label:before {
 		}
 
 			#header .content .inner {
-				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-moz-transition-delay: 0.25s;
-				-webkit-transition-delay: 0.25s;
-				-ms-transition-delay: 0.25s;
-				transition-delay: 0.25s;
+				-moz-transition: display 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				-webkit-transition: display 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				-ms-transition: display 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				transition: display 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
