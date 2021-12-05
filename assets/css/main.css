@@ -110,6 +110,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		height: 100%;
 	}
 
 	*, *:before, *:after {
@@ -118,6 +119,7 @@ input, select, textarea {
 
 	body {
 		background: #1b1f22;
+		height: 100%;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1253,7 +1255,7 @@ input[type="radio"] + label:before {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		position: relative;
-		min-height: 100vh;
+		min-height: 100%;
 		width: 100%;
 		padding: 4rem 2rem;
 		z-index: 3;
