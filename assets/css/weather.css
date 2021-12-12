@@ -2,7 +2,7 @@
 #weather-view-he[data-v-db6ccf64] {
 	z-index: 5;
 	font-family: var(--font);
-	border-radius: 4px !important;
+	border-radius: 10px !important;
 	margin-left: 10px !important;
 	padding: 1rem !important;
 	height: calc(270px + 2rem) !important;
