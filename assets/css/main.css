@@ -3,18 +3,14 @@
 :root {
 	--theme-color: #86C166;
 	--font: "Open Sans", "Segoe UI", "Microsoft Yahei UI", "PingFang SC", sans-serif;
+	--bg-img: url("https://api.kdcc.cn/img/");
 }
 
-@media screen and (max-width: 1920px) {
+/* @media screen and (min-width: 2000px) {
 	:root {
-		--bg-img: url("https://retiehe.com/backend/bing/1080p");
+		--bg-img: url("https://retiehe.com/backend/bing/4k") !important;
 	}
-}
-@media screen and (min-width: 1920px) {
-	:root {
-		--bg-img: url("https://retiehe.com/backend/bing/4k");
-	}
-}
+} */
 
 @keyframes jump {
 	from {transform: translateY(0);}
