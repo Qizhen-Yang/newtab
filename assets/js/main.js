@@ -403,16 +403,14 @@ function setdate() {
 function search() {
 	var n = $("option:selected", "#engines").index();
 	var url = [
+			"https://searx.bar/search?q=",
 			"https://www.baidu.com/s?ie=utf-8&wd=",
 			"https://www.bing.com/search?q=",
 			"https://goo.gle.workers.dev/search?q=",
 			"https://www.zhihu.com/search?q=",
 			"https://www.google.com/search?q="];
 	var content = $("#searchbox").val();
-	content = content.replaceAll("+", "%2b");
-	content = content.replaceAll("%", "%25");
-	content = content.replaceAll("&", "%26");
-	content = content.replaceAll("#", "%23");
+	content = encodeURIComponent(content);
 	window.open(url[n] + content);
 	$("#searchbox").val("");
 }
@@ -485,32 +483,53 @@ function preview() {
 }
 
 // Onload
-	// Date & Time
-	setdate();
-	setInterval("setdate();", 1000);
-
-	// Links
-	formatLinks();
-	
-	// Sticky
-	read();
-	preview();
-
-	// Contextmenu
-	$("*").contextmenu(function (e) {
-		$("#contextmenu").css({"left": e.pageX, "top": e.pageY});
-		$("#contextmenu").fadeIn(200);
-		return false;
+window.onload = function () {
+	// Weather
+	$("body").append("<script src='https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'></script>");
+	// Hitokoto
+	$.ajax({
+		type: "GET",
+		url: "https://v1.hitokoto.cn/?c=i",
+		dataType: "jsonp",
+		jsonp: "callback",
+		jsonpCallback: "hitokoto",
+		success (data) {
+			var data_ = eval("(" + data + ")");
+			console.log(data_, "\n\n", data_["hitokoto"]);
+			$("#hitokoto_text").text("「" + data_["hitokoto"] + "」");
+		},
+		error (textStatus, errorThrown) {
+			console.error(textStatus, errorThrown);
+		}
 	});
-	
-	$("*").click(function (e) {
-		if (e.target != $("#contextmenu")[0])
-			$("#contextmenu").fadeOut(200);	
-	});
-
-	// Searchbox
-	$("#searchbox").focus();
+}
 
 // Console output
 console.log("%cNewTAB 2.0\n欢迎来到 NewTAB!\n自 2020-10-22 起上线运行", "color: #86C166; font-family: 'Open Sans', 'Segoe UI', 'Microsoft Yahei UI', 'PingFang SC', sans-serif; line-height: 1.65;");
 console.log("%c© 2021 Qizhen Yang.", "color: #ffffff; font-family: 'Open Sans', 'Segoe UI', 'Microsoft Yahei UI', 'PingFang SC', sans-serif; line-height: 1.65;");
+
+// Date & Time
+setdate();
+setInterval("setdate();", 1000);
+
+// Links
+formatLinks();
+
+// Sticky
+read();
+preview();
+
+// Contextmenu
+$("*").contextmenu(function (e) {
+	$("#contextmenu").css({"left": e.pageX, "top": e.pageY});
+	$("#contextmenu").fadeIn(200);
+	return false;
+});
+
+$("*").click(function (e) {
+	if (e.target != $("#contextmenu")[0])
+		$("#contextmenu").fadeOut(200);	
+});
+
+// Searchbox
+$("#searchbox").focus();

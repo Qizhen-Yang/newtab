@@ -54,7 +54,7 @@
 				<div class="inner">
 					<h1 id="time" style="font-size: 3rem;">&nbsp;</h1>
 					<h4 id="date">&nbsp;</h4>
-					<p>「<i>声明</i>」近期必应访问不稳定 可能影响此页面</p>
+					<p id="hitokoto_text" style="letter-spacing: 0.025rem;">NewTAB 2.0</p>
 					<form action="javascript:search()"
 						style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
 						<input type="submit" value="search" style="display:none;"/>
@@ -62,6 +62,7 @@
 							style="border-radius: 4px 4px 0 0; backdrop-filter: none; -webkit-backdrop-filter: none;"/>
 						<select id="engines"
 							style="border-radius: 0 0 4px 4px; backdrop-filter: none; -webkit-backdrop-filter: none;">
+							<option>searX</option>
 							<option>百度</option>
 							<option>Bing</option>
 							<option>Google 镜像 (国内可用)</option>
@@ -301,14 +302,6 @@
 	<!-- Main -->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/changelog.js"></script>
-
-	<!-- Add scripts after loaded -->
-	<script>
-		window.onload = function () {
-			// Weather
-			$("body").append("<script src='https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'/>");
-		};
-	</script>
 </body>
 
 </html>
