@@ -413,6 +413,7 @@ function search() {
 	content = encodeURIComponent(content);
 	window.open(url[n] + content);
 	$("#searchbox").val("");
+	localStorage.setItem("engine", $("#engines").val());
 }
 
 // Links
@@ -533,3 +534,7 @@ $("*").click(function (e) {
 
 // Searchbox
 $("#searchbox").focus();
+var engine = localStorage.getItem("engine");
+if (engine) {
+	$("#engines").val(engine);
+}
