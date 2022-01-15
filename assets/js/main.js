@@ -485,6 +485,8 @@ function preview() {
 
 // Onload
 window.onload = function () {
+	// Background
+	$("html").css("--bg-img", "url('https://api.kdcc.cn/img/')");
 	// Weather
 	$("body").append("<script src='https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'></script>");
 	// Hitokoto
@@ -498,6 +500,7 @@ window.onload = function () {
 			var data_ = eval("(" + data + ")");
 			console.log(data_, "\n\n", data_["hitokoto"]);
 			$("#hitokoto_text").text("「" + data_["hitokoto"] + "」");
+			$("#hitokoto_text").attr("from", data_["from"]);
 		},
 		error (textStatus, errorThrown) {
 			console.error(textStatus, errorThrown);

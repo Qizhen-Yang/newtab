@@ -54,14 +54,37 @@
 				<div class="inner">
 					<h1 id="time" style="font-size: 3rem;">&nbsp;</h1>
 					<h4 id="date">&nbsp;</h4>
+					<style>
+						#hitokoto_text::after {
+							display: block;
+							visibility: hidden;
+							content: "《" attr(from) "》";
+							color: transparent;
+							font-size: 0.7rem;
+							transition: all 0.3s;
+						}
+						#hitokoto_text:hover::after {
+							visibility: visible;
+							color: rgba(255, 255, 255, 0.75);
+						}
+						#hitokoto_text {
+							transition: all 0.3s;
+							border-radius: 10px;
+						}
+						#hitokoto_text:hover {
+							background-color: rgba(255, 255, 255, 0.1);
+							backdrop-filter: blur(10px);
+							transition: all 0.3s;
+						}
+					</style>
 					<p id="hitokoto_text" style="letter-spacing: 0.025rem;">NewTAB 2.0</p>
 					<form action="javascript:search()"
 						style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
 						<input type="submit" value="search" style="display:none;"/>
 						<input id="searchbox" type="text" placeholder="搜索" autocomplete="off"
-							style="border-radius: 4px 4px 0 0; backdrop-filter: none; -webkit-backdrop-filter: none;"/>
+							style="border-radius: 10px 10px 0 0; backdrop-filter: none; -webkit-backdrop-filter: none;"/>
 						<select id="engines"
-							style="border-radius: 0 0 4px 4px; backdrop-filter: none; -webkit-backdrop-filter: none;">
+							style="border-radius: 0 0 10px 10px; backdrop-filter: none; -webkit-backdrop-filter: none;">
 							<option>searX</option>
 							<option>百度</option>
 							<option>Bing</option>
