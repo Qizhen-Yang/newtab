@@ -2,7 +2,7 @@
 
 :root {
 	--theme-color: #86C166;
-	--font: "Open Sans", "Segoe UI", "Microsoft Yahei UI", "PingFang SC", sans-serif;
+	--font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 }
 
 /* @media screen and (min-width: 2000px) {
@@ -48,6 +48,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	user-select: none;
 }
 
 ol, ul {
