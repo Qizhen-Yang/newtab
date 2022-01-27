@@ -500,7 +500,7 @@ window.onload = function () {
 			var data_ = eval("(" + data + ")");
 			console.log(data_, "\n\n", data_["hitokoto"]);
 			$("#hitokoto_text").text("「" + data_["hitokoto"] + "」");
-			$("#hitokoto_text").attr("from", data_["from"]);
+			$("#hitokoto_text").attr("from", "《" + data_["from"] + "》");
 		},
 		error (textStatus, errorThrown) {
 			console.error(textStatus, errorThrown);
