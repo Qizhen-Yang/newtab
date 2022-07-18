@@ -1,0 +1,91 @@
+/* Main weather popup */
+.s-sticker {
+	font-weight: var(--fontWeight);
+	font-size: var(--fontSize) !important;
+}
+	.s-sticker * {
+		font-weight: var(--fontWeight);
+		font-size: var(--fontSize) !important;
+	}
+
+#weather-view-he[data-v-db6ccf64] {
+	font-family: var(--fontFamilySans);
+	font-weight: var(--fontWeight);
+	font-weight: var(--fontWeight);
+	border-radius: var(--borderRadiusBox) !important;
+	margin-left: 10px !important;
+	padding: 16px !important;
+	height: 300px !important;
+	background-color: rgba(0 0 0 / 25%) !important;
+	background-image: none !important;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+	#weather-view-he[data-v-db6ccf64] * {
+		font-weight: var(--fontWeight);
+		color: var(--color);
+		box-sizing: border-box;
+	}
+	.wv-n-h-now-txt-t {
+		font-size: 48px;
+		font-weight: var(--fontWeightBold) !important;
+	}
+	.wv-n-h-now-content img[data-v-256fc6cc] {
+		width: 24px !important;
+	}
+
+/* Link of weather source */
+.wv-lt-location > a[data-v-125f7284] {
+	color: var(--themeColor) !important;
+	text-decoration: none !important;
+}
+
+/* Select city */
+.wv-top-backdrop {
+	height: 100% !important;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+select.wv-top-select[data-v-db6ccf64] {
+	display: inline-block;
+	background: none;
+	background-color: #353535;
+	border-color: rgba(255, 255, 255, 0.8);
+	border-radius: var(--borderRadiusItem);
+	width: calc(50% - 32px);
+	height: 32px;
+	margin: auto;
+	text-align: center;
+	color: #ffffff;
+}
+	div.wv-top-col-12:first-child > select.wv-top-select[data-v-db6ccf64] {
+		margin-top: 16px;
+	}
+	div.wv-top-col-12::before {
+		display: inline-block;
+		width: calc(50% - 16px);
+		font-size: 1.2em;
+		text-align: left;
+	}
+	div.wv-top-col-12:nth-child(1)::before {	
+		content: "省级行政区";
+	}
+	div.wv-top-col-12:nth-child(2)::before {	
+		content: "市级行政区";
+	}
+	div.wv-top-col-12:nth-child(3)::before {	
+		content: "区级行政区";
+	}
+
+	select.wv-top-select[data-v-db6ccf64] option {
+		background-color: #353535;
+		color: #aaaaaa;
+	}
+	.wv-top-button {
+		background-color: var(--themeColor) !important;
+		border-radius: var(--borderRadiusItem);
+		line-height: inherit !important;
+		width: calc(100% - 32px) !important;
+		height: 32px !important;
+	}

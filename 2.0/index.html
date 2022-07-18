@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>NewTAB</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/sticky.css" />
+	<link rel="stylesheet" href="assets/css/weather.css" />
+	<link rel="stylesheet" href="assets/css/contextmenu.css" />
+
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Weather -->
+		<section>
+			<div id="he-plugin-simple"></div>
+			<script>
+				WIDGET = {
+					"CONFIG": {
+						"modules": "1024",
+						"background": "5",
+						"tmpColor": "FFFFFF",
+						"tmpSize": "16",
+						"cityColor": "FFFFFF",
+						"citySize": "16",
+						"aqiSize": "16",
+						"weatherIconSize": "24",
+						"alertIconSize": "18",
+						"padding": "10px 10px 10px 10px",
+						"shadow": "0",
+						"language": "auto",
+						"fixed": "true",
+						"vertical": "center",
+						"horizontal": "center",
+						"left": "10",
+						"top": "10",
+						"key": "d02d25dc9e674a1889a2af63fd10f1f5"
+					}
+				};
+			</script>
+		</section>
+		<!-- Header -->
+		<header id="header">
+			<div class="content">
+				<div class="inner">
+					<h1 id="time" style="font-size: 3rem;">&nbsp;</h1>
+					<h4 id="date">&nbsp;</h4>
+					<style>
+						#hitokoto_text::after {
+							display: block;
+							visibility: hidden;
+							content: attr(from);
+							color: transparent;
+							font-size: 0.7rem;
+							transition: all 0.3s;
+						}
+						#hitokoto_text:hover::after {
+							visibility: visible;
+							color: rgba(255, 255, 255, 0.75);
+						}
+						#hitokoto_text {
+							transition: all 0.3s;
+							border-radius: 10px;
+							padding: 0.5rem;
+						}
+						#hitokoto_text:hover {
+							background-color: rgba(255, 255, 255, 0.1);
+							backdrop-filter: blur(10px);
+							transition: all 0.3s;
+						}
+					</style>
+					<p id="hitokoto_text" style="letter-spacing: 0.025rem;" from="「一言」加载中...">NewTAB 2.0</p>
+					<form action="javascript:search()"
+						style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
+						<input type="submit" value="search" style="display:none;"/>
+						<input id="searchbox" type="text" placeholder="搜索" autocomplete="off"
+							style="border-radius: 10px 10px 0 0; backdrop-filter: none; -webkit-backdrop-filter: none;"/>
+						<select id="engines"
+							style="border-radius: 0 0 10px 10px; backdrop-filter: none; -webkit-backdrop-filter: none;">
+							<option>searX</option>
+							<option>百度</option>
+							<option>Bing</option>
+							<option>Google 镜像 (国内可用)</option>
+							<option>知乎</option>
+							<option>Google</option>
+						</select>
+					</form>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#intro">简介</a></li>
+					<li><a href="#links">常用网址</a></li>
+					<li><a href="#stickynotes">便笺</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Intro -->
+			<article id="intro">
+				<h2 class="major">NewTAB&trade; 2.0</h2>
+				<section>
+					<p>「NewTAB」是一个简洁易用的新标签页。╰(*°▽°*)╯</p>
+					<p>这里收录了<a href="#" onclick="$('#engines').focus();">多个搜索引擎</a>以及<a href="#links">众多常用网站链接</a>。还有基于本地缓存的「便笺」。</p>
+					<p>整个网页在 Chromium 内核浏览器中表现效果最佳。</p>
+					<p>欢迎转发分享！</p>
+					<p>
+						GitHub 仓库: <a href="https://github.com/Qizhen-Yang/newtab">Qizhen-Yang/newtab</a>
+						<br />
+						作者：<a href="https://qizhen-yang.cn/">Qizhen Yang</a>
+					</p>
+				</section>
+			</article>
+
+			<!-- Links -->
+			<article id="links">
+				<h2 class="major">常用网址</h2>
+				<section style="text-align: center;margin-bottom: 3rem;">
+					<span id="link-buttons">
+						<a href="https://github.com">GitHub</a>
+						<a href="https://www.youdao.com">有道词典</a>
+						<a href="https://map.baidu.com">百度地图</a>
+						<a href="https://bing.com/images">Bing图片</a>
+						<a href="https://pixabay.com">Pixabay</a>
+						<a href="https://bilibili.com">Bilibili</a>
+						<a href="https://www.csdn.net/">CSDN</a>
+						<a href="https://y.qq.com/">QQ音乐</a>
+						<a href="https://music.163.com">网易云音乐</a>
+						<a href="https://mail.163.com">163邮箱</a>
+						<a href="https://wenku.baidu.com">百度文库</a>
+						<a href="https://jianshu.com">简书</a>
+						<a href="https://ximalaya.com">喜马拉雅</a>
+						<a href="https://www.iqiyi.com/">爱奇艺</a>
+						<a href="https://news.sina.com.cn/">新浪新闻</a>
+						<a href="https://wikipedia.org/">Wikipedia</a>
+						<a href="https://wanweibaike.net">维基镜像版</a>
+					</span>
+					<a class="button primary" href="#add-link">添加</a>
+				</section>
+			</article>
+
+			<!-- Add Link Pop-up -->
+			<article id="add-link">
+				<h2 class="major">添加</h2>
+				<p>Coming soon</p>
+				<form>
+					<a class="button" href="#links">取消</a>
+				</form>
+			</article>
+
+			<!-- Sticky Notes -->
+			<article id="stickynotes">
+				<section>
+					<h6 id="savelog">已从本地读取</h6>
+					<textarea id="sticky" oninput="edit();save();" onblur="preview()"></textarea>
+
+					<section id="md" onclick="edit()" oncontextmenu="edit()"></section>
+
+					<a class="button primary" onclick="javascript:printnote()">打印</a>
+					<a class="button"
+						onclick="javascript:$('#sticky').val('');save();$('#savelog').html(EMPTY);">清空</a>
+					<a class="button" href="#stickyguide">帮助</a>
+				</section>
+			</article>
+
+			<!--Sticky Notes Guide-->
+			<article id="stickyguide">
+				<h2 class="major">「便笺」指南</h2>
+				<section>
+					<p>便笺内容仅保存到「本地缓存」, 没有任何云端存储</p>
+					<p><strong>清除浏览器缓存可能会造成内容永久丢失</strong></p>
+					<p>部分浏览器不支持「打印」功能。: (</p>
+					<p>增加了 Markdown 支持，不在编辑模式中时会自动显示预览</p>
+					<a href="#stickynotes" class="button primary">回到「便笺」</a>
+				</section>
+			</article>
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">NewTAB 2.0</h2>
+				<section>
+					<p>最后修改<code>2022-01-15</code></p>
+					<p><a href="#used">本页面使用到的外部内容 >>></a></p>
+					<p>
+						<a href="#contact" class="button">联系我</a>
+						<a href="1.0" class="button" targer="_blank">NewTAB 1.0</a>
+						<a href="#problems" class="button">兼容性问题</a>
+					</p>
+				</section>
+				<h3 class="major">大事记</h3>
+				<section id="changeLog" style="max-height: 25vh;">
+					<!---->
+				</section>
+			</article>
+
+			<!-- Used -->
+			<article id="used">
+				<h2>外部内容</h2>
+				<section>
+					<a href="https://twitter.com/@ajlkn">@ajlkn</a>
+					<ul>
+						<li>Responsive Tools</li>
+						<li>breakpoints.js</li>
+						<li>browser.js</li>
+						<li>main.js (弹出窗口 & 兼容性部分)</li>
+						<li>util.js</li>
+					</ul>
+					<a href="https://www.bing.com">必应</a>
+					<ul>
+						<li>「每日一图」</li>
+					</ul>
+					<a href="https://qweather.com">和风天气</a>
+					<ul>
+						<li>天气简约插件</li>
+					</ul>
+					<p>来自 <a href="https://icons8.com">Icons8</a> 的图标</p>
+					其它
+					<ul>
+						<li>jquery.js</li>
+						<li>marked.js</li>
+					</ul>
+				</section>
+				<a href="#about" class="button">返回</a>
+			</article>
+
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">联系</h2>
+				<section>
+					<ul class="icons">
+						<li>
+							<a href="mailto:alejandro_yang@yeah.net" title="Alejandro_Yang@yeah.net">
+								<img src="https://img.icons8.com/fluency/48/000000/email-open.png" />
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Qizhen-Yang" title="@Qizhen-Yang">
+								<img src="https://img.icons8.com/fluency/48/000000/github.png" />
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/YangQizhen" title="@YangQizhen">
+								<img src="https://img.icons8.com/fluency/48/000000/twitter-circled.png" />
+							</a>
+						</li>
+					</ul>
+				</section>
+			</article>
+
+			<!-- Problems -->
+			<article id="problems">
+				<h2 class="major">已知的兼容性问题</h2>
+				<section>
+					<blockquote>
+						测试环境为最新版本 Chromium 内核浏览器
+						<br />
+						因此此页面对于 Chromium 内核浏览器支持最好
+					</blockquote>
+					<ul>
+						<li>「毛玻璃」效果不被所有浏览器 / 显卡所支持</li>
+						<li>一些比较特殊的分辨率下可能排版有所影响</li>
+						<li>除 Chromium 内核浏览器外 滚动条只能使用默认的</li>
+						<li>本地缓存内容会随着「Cookies」或「缓存」的清除而同时被删除 (包括「便笺」内容)</li>
+						<li>IE 部分版本中许多动画效果 / 滤镜都无法正常显示</li>
+					</ul>
+				</section>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">
+				&copy; 2020~2021 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.
+				|
+				<a href="#about">关于</a>
+				|
+				<a href="#contact">联系</a>
+				|
+				<a href="https://api.kdcc.cn/img/" target="_blank">背景图片</a>
+			</p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Context Menu -->
+	<div id="contextmenu">
+		<a href="#links" class="button">
+			<img src="https://img.icons8.com/fluency/48/000000/link.png"/>
+			常用网址
+		</a>
+		<a href="#stickynotes" class="button">
+			<img src="https://img.icons8.com/fluency/48/000000/sticky-notes.png"/>
+			便笺
+		</a>
+		<hr/>
+		<a href="#about" class="button">
+			<img src="https://img.icons8.com/fluency/48/000000/info.png"/>
+			关于 NewTAB
+		</a>
+	</div>
+
+	<!-- Scripts -->
+	<!-- Basic -->
+	<script src="https://fastly.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js"></script>
+	<script src="https://fastly.jsdelivr.net/gh/markedjs/marked@latest/marked.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+
+	<!-- Main -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/changelog.js"></script>
+</body>
+
+</html>
