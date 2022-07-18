@@ -172,13 +172,14 @@ window.onload = function () {
 	updateTime();
 	$.ajax({
 		type: 'GET',
-		url: 'https://fastly.jsdelivr.net/gh/shanru-wang/picaday@main/Picaday/picaday.json',
+		url: 'https://raw.githubusercontents.com/shanru-wang/picaday/main/Picaday/picaday.json',
 		dataType: 'json',
 		success(data) {
+			msg('图库请求成功', 'success')
 			let total = data['max'];
 			let bgid = ~~(new Date().getTime() / 86400000) % total + 1;
-			$('#bg').attr('src', 'https://fastly.jsdelivr.net/gh/shanru-wang/picaday@latest/Picaday/' + bgid + '.JPG');
-			msg('正在加载图片');
+			$('#bg').attr('src', 'https://raw.githubusercontents.com/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
+			msg('正在下载图片');
 		},
 		error(textStatus, errorThrown) {
 			msg('请求图库失败', 'error')
