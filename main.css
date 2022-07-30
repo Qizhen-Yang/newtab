@@ -30,6 +30,12 @@
 	}
 }
 
+@media screen and (max-height: 450px) {
+	#footer {
+		display: none;
+	}
+}
+
 #time {
 	font-size: 48px;
 	font-weight: 400;
