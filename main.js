@@ -141,6 +141,16 @@ function msg(text, type = 'info') {
 	}, 1200);
 }
 
+function popup(id) {
+	$('#mask').fadeIn();
+	$('#popup').fadeIn();
+	$('#popupContent').html($('#' + id).html());
+}
+$('#popupClose').click(function () {
+	$('#popup').fadeOut();
+	$('#mask').fadeOut();
+});
+
 WIDGET = {
 	"CONFIG": {
 		"modules": "1024",
@@ -172,13 +182,13 @@ window.onload = function () {
 	updateTime();
 	$.ajax({
 		type: 'GET',
-		url: 'https://raw.githubusercontents.com/shanru-wang/picaday/main/Picaday/picaday.json',
+		url: 'https://picaday.vercel.app/Picaday/picaday.json',
 		dataType: 'json',
 		success(data) {
 			msg('图库请求成功', 'success')
 			let total = data['max'];
 			let bgid = ~~(new Date().getTime() / 86400000) % total + 1;
-			$('#bg').attr('src', 'https://raw.githubusercontents.com/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
+			$('#bg').attr('src', 'https://picaday.vercel.app/Picaday/' + bgid + '.JPG');
 			msg('正在下载图片');
 		},
 		error(textStatus, errorThrown) {

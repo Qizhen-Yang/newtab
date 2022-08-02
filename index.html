@@ -30,17 +30,35 @@
 		</div>
 		<div id="footer">
 			<span>&copy 2020~2022 <a href="https://qizhen-yang.cn">Qizhen Yang</a>.</span>
-			<span><a href="javascript:;">关于</a></span>
+			<span><a href="javascript: popup('about');">关于</a></span>
 			<span><a href="./2.0/">NewTAB 2.0</a></span>
 		</div>
 		<div id="he-plugin-simple"></div>
 	</div>
 	<div id="msg">
 	</div>
+	<div id="mask"></div>
+	<div id="popup">
+		<div id="popupClose" class="button"></div>
+		<div id="popupContent">awa</div>
+	</div>
+
+	<div id="hiddencontent" hidden>
+		<div id="about">
+			<h1>关于 NewTAB</h1>
+			<p>NewTAB 是一个简洁易用的新标签页。</p>
+			<p>GitHub: <a href="https://github.com/Qizhen-Yang/newtab">Qizhen-Yang/newtab</a></p>
+			<p>
+				本站总访问量 <span id="busuanzi_value_site_pv"></span>
+				<br/>
+				本站总用户数 <span id="busuanzi_value_site_uv"></span>
+			</p>
+		</div>
+	</div>
 
 	<script src="https://fastly.jsdelivr.net/gh/jquery/jquery@latest/dist/jquery.min.js"></script>
 	<script src="https://fastly.jsdelivr.net/gh/fians/Waves@latest/dist/waves.min.js"></script>
 	<script src="main.js"></script>
-	<script src="serviceworker.js"></script>
+	<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>

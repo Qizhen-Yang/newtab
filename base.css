@@ -74,6 +74,16 @@ a {
 		transition: color 0.2s ease-in-out;
 	}
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+h6 { font-size: calc(var(--fontSize) + 2px); }
+h5 { font-size: calc(var(--fontSize) + 4px); }
+h4 { font-size: calc(var(--fontSize) + 6px); }
+h3 { font-size: calc(var(--fontSize) + 8px); }
+h2 { font-size: calc(var(--fontSize) + 10px); }
+h1 { font-size: calc(var(--fontSize) + 12px); }
+
 ::selection {
 	background: var(--selectionColor);
 }
