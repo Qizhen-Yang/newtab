@@ -196,7 +196,7 @@ window.onload = function () {
 		}
 	});
 	hitokoto();
-	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>');
+	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>');
 };
 
 // if ('serviceWorker' in navigator) {
