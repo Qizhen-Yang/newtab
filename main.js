@@ -182,7 +182,7 @@ window.onload = function () {
 	updateTime();
 	$.ajax({
 		type: 'GET',
-		url: 'https://picaday.vercel.app/picaday.json',
+		url: 'https://raw.githubusercontents.com/shanru-wang/picaday/main/picaday.json',
 		dataType: 'json',
 		success(data) {
 			msg('图库请求成功', 'success')
