@@ -188,7 +188,7 @@ window.onload = function () {
 			msg('图库请求成功', 'success')
 			let total = data['max'];
 			let bgid = ~~(new Date().getTime() / 86400000) % total + 1;
-			$('#bg').attr('src', 'https://picaday.vercel.app/Picaday/' + bgid + '.JPG');
+			$('#bg').attr('src', 'https://raw.githubusercontents.com/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
 			msg('正在下载图片');
 		},
 		error(textStatus, errorThrown) {
