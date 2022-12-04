@@ -20,8 +20,9 @@ var resultList = {
 	'必应': 'https://www.bing.com/search?q=',
 	'谷歌': 'https://www.google.com/search?q=',
 	'知乎': 'https://www.zhihu.com/search?type=content&q=',
-	'DuckDuckGo': 'https://duckduckgo.com/?q=',
-	'Yandex': 'https://yandex.com/search/?text='
+	'Wikipedia': 'https://zh.wikipedia.org/wiki/',
+	'Yandex': 'https://yandex.com/search/?text=',
+	'GitHub': 'https://github.com/search?q='
 };
 $('#result').append('<div id="calc">计算结果</div>');
 for (let key in resultList) {
