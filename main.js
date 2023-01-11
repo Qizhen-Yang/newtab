@@ -207,3 +207,5 @@ window.onload = function () {
 document.onerror = function (e, i) {
 	console.log(e, i);
 }
+
+$("#version").text("23w02a");
