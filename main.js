@@ -183,13 +183,13 @@ window.onload = function () {
 	updateTime();
 	$.ajax({
 		type: 'GET',
-		url: 'https://raw.githubusercontents.com/shanru-wang/picaday/main/picaday.json',
+		url: 'https://ghraw.qizhen-yang.workers.dev/shanru-wang/picaday/main/picaday.json',
 		dataType: 'json',
 		success(data) {
 			msg('图库请求成功', 'success')
 			let total = data['max'];
 			let bgid = ~~(new Date().getTime() / 86400000) % total + 1;
-			$('#bg').attr('src', 'https://raw.githubusercontents.com/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
+			$('#bg').attr('src', 'https://ghraw.qizhen-yang.workers.dev/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
 			msg('正在下载图片');
 		},
 		error(textStatus, errorThrown) {
@@ -198,6 +198,8 @@ window.onload = function () {
 	});
 	hitokoto();
 	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>');
+	
+	$("#version").text("23w03a");
 };
 
 // if ('serviceWorker' in navigator) {
@@ -207,5 +209,3 @@ window.onload = function () {
 document.onerror = function (e, i) {
 	console.log(e, i);
 }
-
-$("#version").text("23w02a");
