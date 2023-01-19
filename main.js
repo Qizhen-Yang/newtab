@@ -183,7 +183,7 @@ window.onload = function () {
 	updateTime();
 	$.ajax({
 		type: 'GET',
-		url: 'https://ghraw.qizhen-yang.workers.dev/shanru-wang/picaday/main/picaday.json',
+		url: 'https://raw.githubusercontents.com/shanru-wang/picaday/main/picaday.json',
 		dataType: 'json',
 		success(data) {
 			msg('图库请求成功', 'success')
@@ -199,7 +199,7 @@ window.onload = function () {
 	hitokoto();
 	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>');
 	
-	$("#version").text("23w03c");
+	$("#version").text("23w03d");
 };
 
 // if ('serviceWorker' in navigator) {
