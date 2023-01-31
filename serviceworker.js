@@ -26,6 +26,6 @@ this.addEventListener('fetch', function (event) {
 	try {
 		event.respondWith(caches.match(event.request));
 	} catch (error) {
-		;
+		event.respondWith(event.request);
 	}
 });
