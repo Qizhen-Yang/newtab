@@ -199,12 +199,24 @@ window.onload = function () {
 	hitokoto();
 	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>');
 	
-	$("#version").text("23w03d");
+	$("#version").text("23w05a");
 };
 
-// if ('serviceWorker' in navigator) {
-// 	navigator.serviceWorker.register('serviceworker.js');
-// }
+if ('serviceWorker' in navigator) {
+	/* 当页面加载完成就创建一个serviceWorker */
+	window.addEventListener('load', function () {
+		/* 创建并指定对应的执行内容 */
+		/* scope 参数是可选的，可以用来指定你想让 service worker 控制的内容的子目录。 在这个例子里，我们指定了 '/'，表示 根网域下的所有内容。这也是默认值。 */
+		navigator.serviceWorker.register('./serviceWorker.js', {scope: './'})
+			.then(function (registration) {
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			})
+			.catch(function (err) {
+
+				console.log('ServiceWorker registration failed: ', err);
+			});
+	});
+}
 
 document.onerror = function (e, i) {
 	console.log(e, i);
