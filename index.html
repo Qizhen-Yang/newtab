@@ -7,12 +7,12 @@
 	<link rel="stylesheet" href="base.css">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="weather.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css"> -->
+	<link rel="stylesheet" href="waves.min.css">
 	<title>NewTAB</title>
 </head>
 <body>
-	<img id="bg" onerror="msg('图片加载失败', 'error'); $(this).hide();" onload="msg('图片下载完成', 'success')"></img>
+	<img id="bg" onerror="msg('图片加载失败', 'error'); $(this).hide();"></img>
 	<div id="cover"></div>
 	<div id="main">
 		<div id="container">
@@ -58,8 +58,10 @@
 		</div>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script> -->
+	<script src="jquery.min.js"></script>
+	<script src="waves.min.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>

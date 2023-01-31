@@ -14,7 +14,10 @@ function updateTime() {
 	setTimeout(updateTime, 1000);
 }
 
-var current = 1;
+var current = localStorage.getItem('searchId');
+if (current == 0 || current == null) {
+	current = 1;
+}
 var resultList = {
 	'百度': 'https://www.baidu.com/s?ie=utf-8&wd=',
 	'必应': 'https://www.bing.com/search?q=',
@@ -36,6 +39,7 @@ for (let key in resultList) {
 	$('#result').append(item);
 }
 function updateResult(show = true) {
+	localStorage.setItem('searchId', current);
 	let text = $('#search').val();
 	if (text && show) {
 		$('#result').slideDown();
@@ -186,11 +190,9 @@ window.onload = function () {
 		url: 'https://raw.githubusercontents.com/shanru-wang/picaday/main/picaday.json',
 		dataType: 'json',
 		success(data) {
-			msg('图库请求成功', 'success')
 			let total = data['max'];
 			let bgid = ~~(new Date().getTime() / 86400000) % total + 1;
 			$('#bg').attr('src', 'https://ghraw.qizhen-yang.workers.dev/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
-			msg('正在下载图片');
 		},
 		error(textStatus, errorThrown) {
 			msg('请求图库失败', 'error')
@@ -199,7 +201,7 @@ window.onload = function () {
 	hitokoto();
 	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>');
 	
-	$("#version").text("23w05a");
+	$("#version").text("23w05b");
 };
 
 if ('serviceWorker' in navigator) {
