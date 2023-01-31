@@ -7,7 +7,6 @@ this.addEventListener('install', function (event) {
         caches.open('v1').then(function (cache) {
             /* 指定要缓存的内容，地址为相对于跟域名的访问路径 */
             return cache.addAll([
-				'.',
                 'index.html',
 				'main.js',
 				'base.css',
