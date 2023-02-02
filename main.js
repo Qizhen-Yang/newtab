@@ -1,3 +1,5 @@
+const VERSION = "23w04a";
+
 function updateTime() {
 	let d = new Date();
 	let h = d.getHours();
@@ -8,7 +10,7 @@ function updateTime() {
 	let mo = d.getMonth() + 1;
 	let dt = d.getDate();
 	let time = h + ':' + m;
-	let date = y + ' 年 ' + mo + ' 月 ' + dt + ' 日';
+	let date = y + ' �� ' + mo + ' �� ' + dt + ' ��';
 	$('#time').text(time);
 	$('#date').text(date);
 	setTimeout(updateTime, 1000);
@@ -19,17 +21,17 @@ if (current == 0 || current == null) {
 	current = 1;
 }
 var resultList = {
-	'百度': 'https://www.baidu.com/s?ie=utf-8&wd=',
-	'必应': 'https://www.bing.com/search?q=',
-	'谷歌': 'https://www.google.com/search?q=',
-	'知乎': 'https://www.zhihu.com/search?type=content&q=',
+	'�ٶ�': 'https://www.baidu.com/s?ie=utf-8&wd=',
+	'��Ӧ': 'https://www.bing.com/search?q=',
+	'�ȸ�': 'https://www.google.com/search?q=',
+	'֪��': 'https://www.zhihu.com/search?type=content&q=',
 	'Wikipedia': 'https://zh.wikipedia.org/wiki/',
 	'Yandex': 'https://yandex.com/search/?text=',
 	'GitHub': 'https://github.com/search?q='
 };
-$('#result').append('<div id="calc">计算结果</div>');
+$('#result').append('<div id="calc">������</div>');
 for (let key in resultList) {
-	let item = $('<div>').html('<b>' + key + '</b>' + '<span class="right">搜索</span>');
+	let item = $('<div>').html('<b>' + key + '</b>' + '<span class="right">����</span>');
 	item.attr('data-url', resultList[key]);
 	item.click(function () {
 		current = $(this).index();
@@ -54,7 +56,7 @@ function updateResult(show = true) {
 					throw 'error';
 				}
 				else {
-					$('#calc').html('<b>= ' + calc.replace('Infinity', '∞') + '</b><span class="right">计算结果</span>');
+					$('#calc').html('<b>= ' + calc.replace('Infinity', '��') + '</b><span class="right">������</span>');
 					$('#calc').slideDown();
 				}
 			}
@@ -122,15 +124,15 @@ function hitokoto() {
 		dataType: 'jsonp',
 		success(data) {
 			var data_ = eval('(' + data + ')');
-			$('#hitokoto').text('「' + data_['hitokoto'] + '」');
-			$('#hitokoto').attr('from', '《' + data_['from'] + '》');
+			$('#hitokoto').text('��' + data_['hitokoto'] + '��');
+			$('#hitokoto').attr('from', '��' + data_['from'] + '��');
 			$('#hitokotoRefresh').css('display', '');
 		},
 		error(textStatus, errorThrown) {
-			$('#hitokoto').text('网络错误');
-			$('#hitokoto').attr('from', '请稍后再试');
+			$('#hitokoto').text('�������');
+			$('#hitokoto').attr('from', '���Ժ�����');
 			$('#hitokotoRefresh').css('display', '');
-			msg('「一言」加载失败', 'error')
+			msg('��һ�ԡ�����ʧ��', 'error')
 		}
 	});
 }
@@ -195,20 +197,20 @@ window.onload = function () {
 			$('#bg').attr('src', 'https://ghraw.qizhen-yang.cn/shanru-wang/picaday/main/Picaday/' + bgid + '.JPG');
 		},
 		error(textStatus, errorThrown) {
-			msg('请求图库失败', 'error')
+			msg('����ͼ��ʧ��', 'error')
 		}
 	});
 	hitokoto();
 	$('body').append('<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>');
 	
-	$("#version").text("23w05d");
+	$("#version").text(VERSION);
 };
 
 if ('serviceWorker' in navigator) {
-	/* 当页面加载完成就创建一个serviceWorker */
+	/* ��ҳ�������ɾʹ���һ��serviceWorker */
 	window.addEventListener('load', function () {
-		/* 创建并指定对应的执行内容 */
-		/* scope 参数是可选的，可以用来指定你想让 service worker 控制的内容的子目录。 在这个例子里，我们指定了 '/'，表示 根网域下的所有内容。这也是默认值。 */
+		/* ������ָ����Ӧ��ִ������ */
+		/* scope �����ǿ�ѡ�ģ���������ָ�������� service worker ���Ƶ����ݵ���Ŀ¼�� ��������������ָ���� '/'����ʾ �������µ��������ݡ���Ҳ��Ĭ��ֵ�� */
 		navigator.serviceWorker.register('./serviceworker.js', {scope: './'})
 			.then(function (registration) {
 				console.log('ServiceWorker registration successful with scope: ', registration.scope);
