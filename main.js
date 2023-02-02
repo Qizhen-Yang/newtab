@@ -1,4 +1,4 @@
-const VERSION = "23w04b";
+const VERSION = "23w04c";
 function updateTime() {
 	let d = new Date();
 	let h = d.getHours();
