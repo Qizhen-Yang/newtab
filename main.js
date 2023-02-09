@@ -20,8 +20,9 @@ if (current == 0 || current == null) {
 }
 var resultList = {
 	'百度': 'https://www.baidu.com/s?ie=utf-8&wd=',
-	'必应': 'https://www.bing.com/search?q=',
 	'谷歌': 'https://www.google.com/search?q=',
+	'Perplexity': 'https://www.perplexity.ai/?q=',
+	'Bing': 'https://www.bing.com/search?q=',
 	'知乎': 'https://www.zhihu.com/search?type=content&q=',
 	'Wikipedia': 'https://zh.wikipedia.org/wiki/',
 	'Yandex': 'https://yandex.com/search/?text=',
